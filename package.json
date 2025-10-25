@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://joseluisgalvis.github.io/psj",
+  "homepage": "https://joseluisgalvis.github.io/palacio_san_juan/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
