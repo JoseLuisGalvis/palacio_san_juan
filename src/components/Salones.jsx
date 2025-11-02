@@ -78,6 +78,7 @@ const Salones = ({ darkMode }) => {
                     <img
                       src={salon.img}
                       className="card-img-top"
+                      loading="lazy"
                       alt={salon.title}
                       style={{
                         height: isExpanded ? "280px" : "400px",

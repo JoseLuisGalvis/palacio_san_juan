@@ -44,6 +44,7 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
             src={logo}
             alt="Palacio San Juan"
             className="logo-icon"
+            loading="lazy"
             style={{
               height: "55px",
               width: "auto",
