@@ -1,5 +1,5 @@
 import React from "react";
-import salonImage from "../assets/images/salon.jpg";
+import salonImage from "../assets/images/salon.webp";
 
 const Hero = ({ scrollToSection }) => {
   return (

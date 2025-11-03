@@ -1,61 +1,53 @@
-/* Estilos específicos del componente App */
+/* App.css - Estilos críticos para viewport inicial */
 
-/* Transiciones suaves para el modo oscuro */
+/* Transiciones suaves para modo oscuro */
 body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Mejoras para el navbar */
+/* Navbar */
 .navbar {
-  backdrop-filter: blur(10px);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.85
+  ); /* Alternativa ligera a backdrop-filter */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
 .navbar-brand:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s;
+  transform: scale(1.03); /* menor scale para performance */
+  transition: transform 0.3s ease;
 }
 
-/* Hero section parallax effect */
+/* Hero Section */
 #hero {
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-/* Cards hover effect */
-.card {
-  overflow: hidden;
-}
-
-.card img {
-  transition: transform 0.5s ease;
-}
-
-.card:hover img {
-  transform: scale(1.1);
-}
-
-/* Form focus states */
-.form-control:focus,
-.form-select:focus {
-  border-color: #d4af37;
-  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
-}
-
-/* Botones con efecto dorado */
+/* Botones principales */
 .btn-gold {
   background-color: #d4af37;
   border: none;
   color: #000;
   font-weight: bold;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .btn-gold:hover {
   background-color: #c19b2e;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
 }
 
-/* Animación de carga suave */
+/* Animaciones críticas */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -72,7 +64,7 @@ body {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   #hero {
-    background-attachment: scroll;
+    background-attachment: scroll; /* evita parallax costoso */
   }
 
   .display-3 {
