@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { Sun, Moon, Menu, X, Phone } from "lucide-react";
-import logo from "../assets/images/logo.jpeg";
-import ws_icono from "../assets/icons/ws.png";
+import { useState, useEffect } from "react";
+import { Sun, Moon, Menu, X } from "lucide-react";
+import logo from "../assets/images/logo.png";
+import logoWhite from "../assets/images/logoWhite.png";
+import ws_icono from "../assets/icons/silverWs.png";
 
 const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -27,9 +26,10 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
       className={`navbar navbar-expand-lg fixed-top ${
         scrolled ? "shadow" : ""
       } ${darkMode ? "navbar-dark bg-dark" : "navbar-light bg-light"}`}
-      style={{ transition: "all 0.3s" }}
+      style={{ transition: "all 0.3s ease" }}
     >
       <div className="container">
+        {/* ====== LOGO ====== */}
         <a
           className="navbar-brand d-flex align-items-center"
           href="#"
@@ -39,30 +39,27 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
             handleNavClick("hero");
           }}
         >
-          {/* Ícono decorativo del logo - IZQUIERDA */}
           <img
-            src={logo}
+            src={darkMode ? logoWhite : logo}
             alt="Palacio San Juan"
             className="logo-icon"
             loading="lazy"
             style={{
               height: "55px",
               width: "auto",
-              filter: darkMode ? "brightness(1.1)" : "none",
+              filter: darkMode ? "none" : "brightness(1.05)",
+              transition: "all 0.3s ease",
             }}
           />
-
-          {/* Contenedor de texto - DERECHA */}
           <div className="d-flex flex-column">
-            {/* Título principal */}
             <div
               className="logo-title"
               style={{
+                fontFamily: "'Cinzel', serif",
                 fontSize: "1.3rem",
-                fontWeight: "400",
+                fontWeight: "600",
                 letterSpacing: "0.15em",
-                color: darkMode ? "#d4af37" : "#2c3e50",
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                color: darkMode ? "#fff" : "#2c3e50",
                 marginBottom: "2px",
                 whiteSpace: "nowrap",
                 lineHeight: "1.2",
@@ -70,47 +67,42 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
             >
               PALACIO SAN JUAN
             </div>
-
-            {/* Línea decorativa con texto EVENTOS */}
             <div
               className="logo-subtitle"
               style={{
+                fontFamily: "'Montserrat', sans-serif",
                 display: "flex",
                 alignItems: "center",
                 gap: "10px",
                 fontSize: "0.65rem",
-                fontWeight: "300",
+                fontWeight: "400",
                 letterSpacing: "0.35em",
-                color: darkMode ? "#a0a0a0" : "#7f8c8d",
+                color: darkMode ? "#a0a0a0" : "#2c3e50",
                 whiteSpace: "nowrap",
               }}
             >
-              {/* Línea izquierda */}
               <div
                 className="logo-line"
                 style={{
                   width: "45px",
                   height: "1px",
-                  backgroundColor: darkMode ? "#555" : "#999",
+                  backgroundColor: darkMode ? "#a0a0a0" : "#2c3e50",
                 }}
               ></div>
-
-              {/* Texto EVENTOS */}
               <span>EVENTOS</span>
-
-              {/* Línea derecha */}
               <div
                 className="logo-line"
                 style={{
                   width: "45px",
                   height: "1px",
-                  backgroundColor: darkMode ? "#555" : "#999",
+                  backgroundColor: darkMode ? "#a0a0a0" : "#2c3e50",
                 }}
               ></div>
             </div>
           </div>
         </a>
 
+        {/* ====== BOTONES MODO OSCURO + MENÚ ====== */}
         <div className="d-flex align-items-center">
           <button
             className="btn btn-link text-decoration-none me-2 d-lg-none"
@@ -131,78 +123,48 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
           </button>
         </div>
 
+        {/* ====== MENÚ DE NAVEGACIÓN ====== */}
         <div className={`collapse navbar-collapse ${menuOpen ? "show" : ""}`}>
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick("hero");
-                }}
-              >
-                Inicio
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick("about");
-                }}
-              >
-                Nosotros
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick("salones");
-                }}
-              >
-                Salones
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick("servicios");
-                }}
-              >
-                Servicios
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick("contacto");
-                }}
-              >
-                Contacto
-              </a>
-            </li>
-            <a href="https://wa.me/1133649070" target="_blank" class="ms-auto">
+            {[
+              { id: "hero", label: "Inicio" },
+              { id: "about", label: "Nosotros" },
+              { id: "salones", label: "Salones" },
+              { id: "servicios", label: "Servicios" },
+              { id: "contacto", label: "Contacto" },
+            ].map((item) => (
+              <li className="nav-item" key={item.id}>
+                <a
+                  className="nav-link"
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(item.id);
+                  }}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+
+            {/* Icono WhatsApp */}
+            <a
+              href="https://wa.me/1133649070"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="silverWs ms-auto"
+            >
               <img
                 src={ws_icono}
                 alt="WhatsApp"
                 loading="lazy"
-                width="50"
-                height="50"
+                width="70"
+                height="70"
                 id="icon-ws"
               />
             </a>
+
+            {/* Botón modo oscuro (desktop) */}
             <li className="nav-item ms-lg-3 d-none d-lg-block">
               <button
                 className="btn btn-link text-decoration-none"
@@ -215,42 +177,6 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
           </ul>
         </div>
       </div>
-
-      {/* Estilos responsive */}
-      <style jsx>{`
-        @media (max-width: 768px) {
-          .logo-icon {
-            height: 45px !important;
-          }
-          .logo-title {
-            font-size: 1.1rem !important;
-            letter-spacing: 0.1em !important;
-          }
-          .logo-subtitle {
-            font-size: 0.55rem !important;
-            gap: 6px !important;
-          }
-          .logo-line {
-            width: 30px !important;
-          }
-        }
-
-        @media (max-width: 576px) {
-          .logo-icon {
-            height: 40px !important;
-          }
-          .logo-title {
-            font-size: 0.95rem !important;
-          }
-          .logo-subtitle {
-            font-size: 0.5rem !important;
-            gap: 5px !important;
-          }
-          .logo-line {
-            width: 25px !important;
-          }
-        }
-      `}</style>
     </nav>
   );
 };

@@ -98,16 +98,7 @@ const ContactForm = ({ darkMode }) => {
             onChange={handleChange}
           />
         </div>
-        <button
-          onClick={handleSubmit}
-          className="btn w-100 py-2"
-          style={{
-            backgroundColor: "#d4af37",
-            border: "none",
-            color: "#000",
-            fontWeight: "bold",
-          }}
-        >
+        <button onClick={handleSubmit} className="btn w-100 py-2 btn-contact">
           Enviar Consulta
         </button>
       </div>
@@ -124,19 +115,13 @@ const Contacto = ({ darkMode }) => {
       <div className="container py-5">
         <div className="row">
           <div className="col-lg-6 mb-4 mb-lg-0">
-            <h2 className="display-5 fw-bold mb-4" style={{ color: "#d4af37" }}>
-              Contáctanos
-            </h2>
+            <h2 className="display-5 text-dark fw-bold mb-4">Contáctanos</h2>
             <p className="lead mb-4">
               Estamos listos para hacer realidad tu evento soñado
             </p>
 
             <div className="mb-3 d-flex align-items-start">
-              <MapPin
-                size={24}
-                className="me-3 mt-1"
-                style={{ color: "#d4af37", flexShrink: 0 }}
-              />
+              <MapPin size={24} className="me-3 mt-1" />
               <div>
                 <h6 className="fw-bold">Dirección</h6>
                 <p>Martín Rodríguez 520, Quilmes, Buenos Aires 1878</p>
@@ -144,11 +129,7 @@ const Contacto = ({ darkMode }) => {
             </div>
 
             <div className="mb-3 d-flex align-items-start">
-              <Phone
-                size={24}
-                className="me-3 mt-1"
-                style={{ color: "#d4af37", flexShrink: 0 }}
-              />
+              <Phone size={24} className="me-3 mt-1" />
               <div>
                 <h6 className="fw-bold">Teléfono</h6>
                 <p>+54 11 1234-5678</p>
@@ -156,11 +137,7 @@ const Contacto = ({ darkMode }) => {
             </div>
 
             <div className="mb-3 d-flex align-items-start">
-              <Mail
-                size={24}
-                className="me-3 mt-1"
-                style={{ color: "#d4af37", flexShrink: 0 }}
-              />
+              <Mail size={24} className="me-3 mt-1" />
               <div>
                 <h6 className="fw-bold">Email</h6>
                 <p>info@palaciosanjuan.com.ar</p>
@@ -168,13 +145,9 @@ const Contacto = ({ darkMode }) => {
             </div>
 
             <div className="mb-3 d-flex align-items-start">
-              <Clock
-                size={24}
-                className="me-3 mt-1"
-                style={{ color: "#d4af37", flexShrink: 0 }}
-              />
+              <Clock size={24} className="me-3 mt-1" />
               <div>
-                <h6 className="fw-bold">Horario de Atención</h6>
+                <h6 className="fw-bold">Horario de Atención (Cita Previa)</h6>
                 <p>
                   Lunes a Viernes: 10:00 - 19:00
                   <br />

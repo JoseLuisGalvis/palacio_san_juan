@@ -1,7 +1,7 @@
 import React from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
-// import logoFooter from "../assets/images/logoFooter.jpeg";
-import logo from "../assets/images/logo.jpeg";
+import logo from "../assets/images/logo.png";
+import logoWhite from "../assets/images/logoWhite.png";
 
 const Footer = ({ darkMode, scrollToSection }) => {
   return (
@@ -12,7 +12,7 @@ const Footer = ({ darkMode, scrollToSection }) => {
             <a className="navbar-brand d-flex align-items-center" href="#">
               {/* Ícono decorativo del logo - IZQUIERDA */}
               <img
-                src={logo}
+                src={darkMode ? logoWhite : logo}
                 alt="Palacio San Juan"
                 className="logo-icon"
                 style={{
@@ -32,7 +32,7 @@ const Footer = ({ darkMode, scrollToSection }) => {
                     fontSize: "1.1rem",
                     fontWeight: "400",
                     letterSpacing: "0.15em",
-                    color: darkMode ? "#d4af37" : "#d4af37",
+                    color: darkMode ? "#ffff" : "#ffff",
                     fontFamily: "Georgia, 'Times New Roman', serif",
                     marginBottom: "2px",
                     whiteSpace: "nowrap",
@@ -88,7 +88,7 @@ const Footer = ({ darkMode, scrollToSection }) => {
           </div>
 
           <div className="col-md-3">
-            <h6 className="fw-bold mb-3" style={{ color: "#d4af37" }}>
+            <h6 className="fw-bold mb-3" style={{ color: "#ffff" }}>
               Enlaces Rápidos
             </h6>
             <ul className="list-unstyled">
@@ -144,7 +144,7 @@ const Footer = ({ darkMode, scrollToSection }) => {
           </div>
 
           <div className="col-md-3">
-            <h6 className="fw-bold mb-3" style={{ color: "#d4af37" }}>
+            <h6 className="fw-bold mb-3" style={{ color: "#ffff" }}>
               Servicios
             </h6>
             <ul className="list-unstyled">
@@ -156,7 +156,7 @@ const Footer = ({ darkMode, scrollToSection }) => {
           </div>
 
           <div className="col-md-3">
-            <h6 className="fw-bold mb-3" style={{ color: "#d4af37" }}>
+            <h6 className="fw-bold mb-3" style={{ color: "#ffff" }}>
               Contacto
             </h6>
             <p className="mb-2">

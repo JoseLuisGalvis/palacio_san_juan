@@ -1,70 +1,155 @@
-/* App.css - Estilos críticos para viewport inicial */
+/* ===============================
+   🎨 App.css - Estilos globales
+   Proyecto: Palacio San Juan
+   =============================== */
 
-/* Transiciones suaves para modo oscuro */
+/* -------------------------------
+   RESET GLOBAL Y BASE
+--------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Navbar */
+/* ⚡ AJUSTE: clase para dark mode global */
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+/* -------------------------------
+   NAVBAR
+--------------------------------*/
 .navbar {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.85
-  ); /* Alternativa ligera a backdrop-filter */
+  background-color: rgba(255, 255, 255, 0.85);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
 
 .navbar-brand:hover {
-  transform: scale(1.03); /* menor scale para performance */
+  transform: scale(1.05);
   transition: transform 0.3s ease;
 }
 
-/* Hero Section */
-#hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.navbar .nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-/* Botones principales */
+.navbar .nav-link:hover {
+  color: #000;
+  font-weight: 600;
+}
+
+/* ⚡ AJUSTE: Hover blanco en dark mode */
+body.dark-mode .navbar .nav-link:hover {
+  color: #fff;
+  font-weight: 600;
+}
+
+body.dark-mode .btn-link {
+  --bs-btn-font-weight: 500;
+  --bs-btn-color: #ffff !important;
+}
+
+/* -------------------------------
+   BOTONES
+--------------------------------*/
 .btn-gold {
-  background-color: #d4af37;
+  background-color: #fff;
   border: none;
   color: #000;
   font-weight: bold;
   transition: all 0.25s ease;
 }
 
-.btn-gold:hover {
-  background-color: #c19b2e;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+.silverWs {
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.7));
 }
 
-/* Animaciones críticas */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.btn-link {
+  --bs-btn-font-weight: 500;
+  --bs-btn-color: #353333 !important;
+}
+/* -------------------------------
+   HERO SECTION
+--------------------------------*/
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
 }
 
-.fade-in {
-  animation: fadeIn 0.5s ease-in;
+/* 🎥 Video de fondo */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* para llenar el área sin deformarse */
+  z-index: 0;
 }
 
-/* Responsive adjustments */
+/* 🌑 Overlay para oscurecer un poco el video */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65); /* oscurece el fondo */
+  z-index: 1;
+}
+
+/* ✨ Contenido encima del overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* -------------------------------
+   BOTÓN HERO - HOVER
+--------------------------------*/
+.btn-hero {
+  background-color: #fff; /* ojo, antes pusiste #ffff (falta un f) */
+  border: none;
+  color: #000;
+  font-weight: bold;
+
+  /* transición suave para hover */
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    background-color 0.25s ease, color 0.25s ease;
+}
+
+.btn-hero:hover {
+  background-color: #fff; /* fondo blanco */
+  color: #000; /* texto negro */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px); /* efecto flotante */
+}
+
+/* -------------------------------
+   RESPONSIVE - NAVBAR Y HERO
+--------------------------------*/
 @media (max-width: 768px) {
   #hero {
-    background-attachment: scroll; /* evita parallax costoso */
+    background-attachment: scroll;
   }
 
   .display-3 {
@@ -74,4 +159,223 @@ body {
   .display-5 {
     font-size: 2rem;
   }
+
+  .logo-icon {
+    height: 45px !important;
+  }
+
+  .logo-title {
+    font-size: 1.1rem !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  .logo-subtitle {
+    font-size: 0.55rem !important;
+    gap: 6px !important;
+  }
+
+  .logo-line {
+    width: 30px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-icon {
+    height: 40px !important;
+  }
+
+  .logo-title {
+    font-size: 0.95rem !important;
+  }
+
+  .logo-subtitle {
+    font-size: 0.5rem !important;
+    gap: 5px !important;
+  }
+
+  .logo-line {
+    width: 25px !important;
+  }
+}
+
+/* -------------------------------
+   SALONES SECTION
+--------------------------------*/
+.salones-section {
+  scroll-margin-top: 80px;
+}
+
+/* Card general */
+.salon-card {
+  border: none;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+
+/* Imagen y overlay */
+.salon-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.salon-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+.salon-image.expanded {
+  height: 280px;
+}
+
+/* Hover sobre la imagen para encogerla ligeramente */
+.salon-image-wrapper:hover .salon-image {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
+
+.salon-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 60px 30px 30px;
+}
+
+.salon-name {
+  font-size: 2.2rem;
+  color: #ffff;
+  letter-spacing: 0.08em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Botón VER MÁS */
+.btn-expand {
+  background-color: #000;
+  border: none;
+  color: #ffff;
+  font-weight: 600;
+  padding: 14px;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.btn-expand:hover {
+  background-color: #575756;
+  color: #ffff;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease;
+}
+
+/* Detalles expandido */
+.salon-capacity {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.salon-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Características */
+.salon-features-title {
+  color: #2c3e50;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+body.dark-mode .salon-features-title {
+  color: #d4af37;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+body.dark-mode .feature-item {
+  color: #c0c0c0;
+}
+
+/* Botón WhatsApp */
+.btn-whatsapp {
+  background-color: #25d366;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1fb855;
+}
+
+.whatsapp-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Botón Cerrar */
+.btn-close-salon {
+  background-color: #e0e0e0;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.btn-close-salon:hover {
+  background-color: #d0d0d0;
+}
+
+body.dark-mode .btn-close-salon {
+  background-color: #555;
+  color: #fff;
+}
+
+body.dark-mode .btn-close-salon:hover {
+  background-color: #666;
+}
+
+/* Contacto */
+
+.btn-contact {
+  background-color: #000;
+  border: none;
+  color: #ffff;
+  font-weight: "bold";
 }

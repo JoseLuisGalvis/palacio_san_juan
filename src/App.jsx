@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-// Importar todos los componentes
+// ================================
+// Componentes
+// ================================
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
@@ -11,51 +15,58 @@ import Contacto from "./components/Contacto";
 import Footer from "./components/Footer";
 
 function App() {
+  // ================================
+  // Estado Dark Mode
+  // ================================
   const [darkMode, setDarkMode] = useState(false);
 
-  // Configurar el tema de Bootstrap según el modo oscuro
+  // 🔹 Hook para aplicar la clase dark-mode al body
   useEffect(() => {
     if (darkMode) {
-      document.documentElement.setAttribute("data-bs-theme", "dark");
+      document.body.classList.add("dark-mode");
     } else {
-      document.documentElement.removeAttribute("data-bs-theme");
+      document.body.classList.remove("dark-mode");
     }
-  }, [darkMode]);
+  }, [darkMode]); // se ejecuta cada vez que cambia darkMode
 
-  // Función para alternar modo oscuro
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  // Función para alternar dark mode
+  const toggleDarkMode = () => setDarkMode(!darkMode);
 
-  // Función para hacer scroll a secciones
+  // ================================
+  // Inicializar AOS (animaciones al hacer scroll)
+  // ================================
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // duración de animación en ms
+      easing: "ease-out",
+      once: true, // animar solo la primera vez
+      mirror: false, // no repetir al hacer scroll hacia arriba
+    });
+  }, []); // se ejecuta solo al montar la app
+
+  // ================================
+  // Función scroll suave a secciones
+  // ================================
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    if (element) element.scrollIntoView({ behavior: "smooth" });
   };
 
+  // ================================
+  // Render
+  // ================================
   return (
-    <div
-      className={darkMode ? "bg-dark text-light" : "bg-light text-dark"}
-      style={{ minHeight: "100vh" }}
-    >
+    <div style={{ minHeight: "100vh" }}>
       <Navbar
         darkMode={darkMode}
         toggleDarkMode={toggleDarkMode}
         scrollToSection={scrollToSection}
       />
-
       <Hero scrollToSection={scrollToSection} />
-
       <AboutUs darkMode={darkMode} />
-
       <Salones darkMode={darkMode} />
-
       <Servicios darkMode={darkMode} />
-
       <Contacto darkMode={darkMode} />
-
       <Footer darkMode={darkMode} scrollToSection={scrollToSection} />
     </div>
   );

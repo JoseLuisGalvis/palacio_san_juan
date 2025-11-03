@@ -1,39 +1,42 @@
 import React from "react";
 import { Star, Users } from "lucide-react";
+import aboutUs from "../assets/images/aboutUs.webp";
 
 const AboutUs = ({ darkMode }) => {
   return (
-    <section id="about" className={`py-5 ${darkMode ? "bg-dark" : "bg-white"}`}>
+    <section
+      id="about"
+      className={`about-section py-5 ${darkMode ? "bg-dark" : "bg-white"}`}
+    >
       <div className="container py-5">
         <div className="row align-items-center">
-          <div className="col-lg-6 mb-4 mb-lg-0">
-            <div
-              className="position-relative"
-              style={{ animation: "slideInLeft 1s ease-out" }}
-            >
+          {/* 🔹 Imagen con borde dorado animado */}
+          <div
+            className="col-lg-6 mb-4 mb-lg-0"
+            data-aos="fade-right"
+            data-aos-duration="1200"
+            data-aos-delay="200"
+          >
+            <div className="about-image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src={aboutUs}
                 alt="Palacio San Juan Interior"
-                className="img-fluid rounded shadow-lg"
+                className="about-image img-fluid rounded shadow-lg"
                 loading="lazy"
-                style={{ transform: "translateZ(0)" }}
               />
-              <div
-                className="position-absolute top-0 start-0 w-100 h-100 border border-3 rounded"
-                style={{
-                  borderColor: "#d4af37 !important",
-                  transform: "translate(-10px, -10px)",
-                  zIndex: -1,
-                }}
-              />
+              <div className="about-image-border"></div>
             </div>
           </div>
-          <div className="col-lg-6">
-            <div style={{ animation: "slideInRight 1s ease-out" }}>
-              <h2
-                className="display-5 fw-bold mb-4"
-                style={{ color: "#d4af37" }}
-              >
+
+          {/* 🔹 Texto descriptivo animado */}
+          <div
+            className="col-lg-6"
+            data-aos="fade-left"
+            data-aos-duration="1200"
+            data-aos-delay="400"
+          >
+            <div className="about-text">
+              <h2 className="about-title display-5 fw-bold mb-4">
                 Sobre Nosotros
               </h2>
               <p className="fs-5 mb-4">
@@ -47,27 +50,21 @@ const AboutUs = ({ darkMode }) => {
                 primer nivel, atención personalizada y un equipo profesional
                 dedicado a hacer realidad cada detalle de tu evento soñado.
               </p>
+
               <div className="row g-3">
                 <div className="col-6">
-                  <div className="d-flex align-items-center">
-                    <Star
-                      size={32}
-                      className="me-2"
-                      style={{ color: "#d4af37" }}
-                    />
+                  <div className="about-stat d-flex align-items-center">
+                    <Star size={32} className="about-icon me-2" />
                     <div>
                       <h5 className="mb-0">500+</h5>
                       <small>Eventos exitosos</small>
                     </div>
                   </div>
                 </div>
+
                 <div className="col-6">
-                  <div className="d-flex align-items-center">
-                    <Users
-                      size={32}
-                      className="me-2"
-                      style={{ color: "#d4af37" }}
-                    />
+                  <div className="about-stat d-flex align-items-center">
+                    <Users size={32} className="about-icon me-2" />
                     <div>
                       <h5 className="mb-0">300</h5>
                       <small>Capacidad</small>
