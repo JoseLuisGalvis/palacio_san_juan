@@ -131,6 +131,7 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
               { id: "about", label: "Nosotros" },
               { id: "salones", label: "Salones" },
               { id: "servicios", label: "Servicios" },
+              { id: "catering", label: "Catering" },
               { id: "contacto", label: "Contacto" },
             ].map((item) => (
               <li className="nav-item" key={item.id}>

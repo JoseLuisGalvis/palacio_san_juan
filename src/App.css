@@ -379,3 +379,209 @@ body.dark-mode .btn-close-salon:hover {
   color: #ffff;
   font-weight: "bold";
 }
+
+/* Sección Catering */
+.catering-section {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--bg-color, #ffffff);
+  transition: background-color 0.3s ease;
+}
+
+/* Título de sección */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-color, #333);
+  margin-bottom: 1rem;
+}
+
+body.dark-mode .catering-section .section-title {
+  color: var(--text-dark, #ffffff);
+}
+
+.title-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--accent-color, #007bff),
+    var(--accent-light, #0099ff)
+  );
+  border-radius: 2px;
+}
+
+/* Carrusel Catering */
+.catering-slider-wrap {
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.catering-section.dark-mode .catering-slider-wrap {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.catering-slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: catering-slider-animation 36s infinite ease-in-out;
+}
+
+.catering-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Overlay oscuro sobre las imágenes */
+.catering-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.catering-section.dark-mode .catering-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.catering-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Etiqueta en esquina inferior derecha */
+.catering-label {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 12px 24px;
+  border-radius: 8px;
+  transform: translateX(0);
+  transition: all 0.3s ease;
+}
+
+.catering-section.dark-mode .catering-label {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.catering-label span {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto hover en la etiqueta */
+.catering-slide:hover .catering-label {
+  background: rgba(0, 0, 0, 0.85);
+  transform: translateX(-4px) translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.catering-section.dark-mode .catering-slide:hover .catering-label {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Animación del carrusel */
+@keyframes catering-slider-animation {
+  0%,
+  11.1% {
+    opacity: 1;
+    z-index: 1;
+  }
+  16.7%,
+  94.4% {
+    opacity: 0;
+    z-index: 0;
+  }
+  100% {
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+/* Delays para cada slide */
+#catering-slide-2 {
+  animation-delay: 6s;
+}
+#catering-slide-3 {
+  animation-delay: 12s;
+}
+#catering-slide-4 {
+  animation-delay: 18s;
+}
+#catering-slide-5 {
+  animation-delay: 24s;
+}
+#catering-slide-6 {
+  animation-delay: 30s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .catering-slider-wrap {
+    height: 60vh;
+  }
+
+  .catering-label {
+    bottom: 16px;
+    right: 16px;
+    padding: 10px 20px;
+  }
+
+  .catering-label span {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .catering-slider-wrap {
+    height: 50vh;
+  }
+
+  .catering-label {
+    bottom: 12px;
+    right: 12px;
+    padding: 8px 16px;
+  }
+
+  .catering-label span {
+    font-size: 0.9rem;
+  }
+}

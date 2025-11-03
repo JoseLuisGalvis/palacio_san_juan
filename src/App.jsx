@@ -11,6 +11,7 @@ import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
 import Salones from "./components/Salones";
 import Servicios from "./components/Servicios";
+import Catering from "./components/Catering";
 import Contacto from "./components/Contacto";
 import Footer from "./components/Footer";
 
@@ -66,6 +67,7 @@ function App() {
       <AboutUs darkMode={darkMode} />
       <Salones darkMode={darkMode} />
       <Servicios darkMode={darkMode} />
+      <Catering darkMode={darkMode} />
       <Contacto darkMode={darkMode} />
       <Footer darkMode={darkMode} scrollToSection={scrollToSection} />
     </div>
