@@ -72,6 +72,7 @@ const ContactForm = ({ darkMode }) => {
       tipoEvento: formData.tipoEvento,
       fecha: formData.fecha,
       mensaje: formData.mensaje,
+      enviado: new Date().toLocaleString("es-AR"),
     };
 
     try {
