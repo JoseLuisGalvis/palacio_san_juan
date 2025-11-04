@@ -165,11 +165,11 @@ const Footer = ({ darkMode, scrollToSection }) => {
             </p>
             <p className="mb-2">
               <Phone size={16} className="me-2" />
-              +54 11 1234-5678
+              +54 11 2649-6197
             </p>
-            <p className="mb-2">
+            <p className="mb-2 mail-text">
               <Mail size={16} className="me-2" />
-              info@palaciosanjuan.com.ar
+              palaciosanjuaneventos@gmail.com
             </p>
           </div>
         </div>

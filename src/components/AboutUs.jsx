@@ -21,6 +21,8 @@ const AboutUs = ({ darkMode }) => {
               <img
                 src={aboutUs}
                 alt="Palacio San Juan Interior"
+                width="800"
+                height="600"
                 className="about-image img-fluid rounded shadow-lg"
                 loading="lazy"
               />

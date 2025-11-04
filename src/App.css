@@ -326,10 +326,10 @@ body.dark-mode .feature-item {
 
 /* Botón WhatsApp */
 .btn-whatsapp {
-  background-color: #25d366;
+  background-color: #d4d2d2;
   border: none;
   color: #fff;
-  font-weight: 600;
+  font-weight: 500;
   padding: 12px;
   border-radius: 8px;
   display: flex;
@@ -340,7 +340,9 @@ body.dark-mode .feature-item {
 }
 
 .btn-whatsapp:hover {
-  background-color: #1fb855;
+  background-color: #636463ff;
+  color: #fff;
+  font-weight: 700;
 }
 
 .whatsapp-icon {
@@ -584,4 +586,9 @@ body.dark-mode .catering-section .section-title {
   .catering-label span {
     font-size: 0.9rem;
   }
+}
+
+/* Footer */
+.mail-text {
+  font-size: 0.9em !important;
 }
