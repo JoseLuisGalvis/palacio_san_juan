@@ -1,7 +1,7 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
-import salonImage from "../assets/images/salon.webp"; // cambia si tu imagen tiene otro nombre o ruta
+import salonImage from "../assets/images/dali.webp"; // cambia si tu imagen tiene otro nombre o ruta
 
 // Icono personalizado del marcador
 const customIcon = new L.Icon({
