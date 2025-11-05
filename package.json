@@ -4,14 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://joseluisgalvis.github.io/palacio_san_juan/",
-"scripts": {
+  "scripts": {
     "dev": "vite",
-    "build": "vite build",                    
-    "build:gh": "VITE_DEPLOY_ENV=GH_PAGES vite build", 
+    "build": "vite build",
+    "build:gh": "cross-env NODE_ENV=ghpages vite build",
+    "predeploy": "npm run build:gh",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview",
-    "lint": "eslint .",
-    "predeploy": "npm run build:gh",         
-    "deploy": "gh-pages -d dist"               
+    "lint": "eslint ."
   },
   "dependencies": {
     "aos": "^2.3.4",
