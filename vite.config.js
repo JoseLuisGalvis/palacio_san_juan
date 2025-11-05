@@ -1,12 +1,12 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// ✅ Detecta automáticamente si estás desplegando en GitHub Pages
-const isGhPages = process.env.NODE_ENV === "ghpages";
+// ✅ Chequea la variable correcta que defines en package.json
+const isGhPages = process.env.VITE_DEPLOY_ENV === "GH_PAGES";
 
 export default defineConfig({
   plugins: [react()],
-  base: isGhPages ? "/palacio_san_juan/" : "/", // base dinámica
+  base: isGhPages ? "/palacio_san_juan/" : "/",
   build: {
     outDir: "dist",
     sourcemap: false,
