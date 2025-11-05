@@ -241,8 +241,10 @@ const Contacto = ({ darkMode }) => {
     >
       <div className="container py-5">
         <div className="row">
-          <div className="col-lg-6 mb-4 mb-lg-0">
-            <h2 className="display-5 text-dark fw-bold mb-4">Contáctanos</h2>
+          <div className="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+            <h2 className="contact-title display-5 text-dark fw-bold mb-4">
+              Contáctanos
+            </h2>
             <p className="lead mb-4">
               Estamos listos para hacer realidad tu evento soñado
             </p>
@@ -267,7 +269,7 @@ const Contacto = ({ darkMode }) => {
               <Mail size={24} className="me-3 mt-1" />
               <div>
                 <h6 className="fw-bold">Email</h6>
-                <p>palaciossanjuaneventos@gmail.com</p>
+                <p className="mail-text">palaciossanjuaneventos@gmail.com</p>
               </div>
             </div>
 
@@ -284,13 +286,13 @@ const Contacto = ({ darkMode }) => {
             </div>
           </div>
 
-          <div className="col-lg-6">
+          <div className="col-lg-6" data-aos="fade-left">
             <ContactForm darkMode={darkMode} />
           </div>
         </div>
 
         <div className="row mt-5">
-          <div className="col-12">
+          <div className="col-12" data-aos="zoom-in">
             <SalonMap />
           </div>
         </div>

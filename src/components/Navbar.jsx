@@ -33,7 +33,6 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
         <a
           className="navbar-brand d-flex align-items-center"
           href="#"
-          style={{ cursor: "pointer", textDecoration: "none", gap: "15px" }}
           onClick={(e) => {
             e.preventDefault();
             handleNavClick("hero");
@@ -105,21 +104,21 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
         {/* ====== BOTONES MODO OSCURO + MENÚ ====== */}
         <div className="d-flex align-items-center">
           <button
-            className="btn btn-link text-decoration-none me-2 d-lg-none"
+            className="btn btn-link text-decoration-none p-2 d-lg-none"
             onClick={toggleDarkMode}
             style={{ color: darkMode ? "#fff" : "#000" }}
             aria-label="Toggle Dark Mode"
           >
-            {darkMode ? <Sun size={24} /> : <Moon size={24} />}
+            {darkMode ? <Sun size={22} /> : <Moon size={22} />}
           </button>
 
           <button
-            className="btn btn-link text-decoration-none d-lg-none"
+            className="btn btn-link text-decoration-none p-2 d-lg-none"
             onClick={toggleMenu}
             style={{ color: darkMode ? "#fff" : "#000" }}
             aria-label="Toggle Menu"
           >
-            {menuOpen ? <X size={28} /> : <Menu size={28} />}
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 

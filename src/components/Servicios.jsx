@@ -103,7 +103,7 @@ const Servicios = ({ darkMode }) => {
                   style={{ color: "#c0c0c0", marginRight: "15px" }}
                 />
                 <h4
-                  className="fw-bold mb-0"
+                  className="service-title fw-bold mb-0"
                   style={{
                     color: darkMode ? "#c0c0c0" : "#303030",
                     letterSpacing: "1px",
@@ -139,7 +139,7 @@ const Servicios = ({ darkMode }) => {
                   style={{ color: "#c0c0c0", marginRight: "15px" }}
                 />
                 <h4
-                  className="fw-bold mb-0"
+                  className="service-title fw-bold mb-0"
                   style={{
                     color: darkMode ? "#c0c0c0" : "#303030",
                     letterSpacing: "1px",
@@ -167,7 +167,7 @@ const Servicios = ({ darkMode }) => {
                   style={{ color: "#c0c0c0", marginRight: "15px" }}
                 />
                 <h4
-                  className="fw-bold mb-0"
+                  className="service-title fw-bold mb-0"
                   style={{
                     color: darkMode ? "#c0c0c0" : "#303030",
                     letterSpacing: "1px",
@@ -205,7 +205,7 @@ const Servicios = ({ darkMode }) => {
                   style={{ color: "#c0c0c0", marginRight: "15px" }}
                 />
                 <h4
-                  className="fw-bold mb-0"
+                  className="service-title fw-bold mb-0"
                   style={{
                     color: darkMode ? "#c0c0c0" : "#303030",
                     letterSpacing: "1px",
@@ -241,7 +241,7 @@ const Servicios = ({ darkMode }) => {
                   style={{ color: "#c0c0c0", marginRight: "15px" }}
                 />
                 <h4
-                  className="fw-bold mb-0"
+                  className="service-title fw-bold mb-0"
                   style={{
                     color: darkMode ? "#c0c0c0" : "#303030",
                     letterSpacing: "1px",
@@ -279,7 +279,7 @@ const Servicios = ({ darkMode }) => {
                   style={{ color: "#c0c0c0", marginRight: "15px" }}
                 />
                 <h4
-                  className="fw-bold mb-0"
+                  className="service-title fw-bold mb-0"
                   style={{
                     color: darkMode ? "#c0c0c0" : "#303030",
                     letterSpacing: "1px",
@@ -315,7 +315,7 @@ const Servicios = ({ darkMode }) => {
                   style={{ color: "#c0c0c0", marginRight: "15px" }}
                 />
                 <h4
-                  className="fw-bold mb-0"
+                  className="service-title fw-bold mb-0"
                   style={{
                     color: darkMode ? "#c0c0c0" : "#303030",
                     letterSpacing: "1px",
