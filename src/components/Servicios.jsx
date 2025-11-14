@@ -100,6 +100,7 @@ const Servicios = ({ darkMode }) => {
                 <img
                   src={building}
                   alt="Building"
+                  className="service-icon"
                   style={{
                     width: "36px",
                     height: "36px",
@@ -142,6 +143,7 @@ const Servicios = ({ darkMode }) => {
                 <img
                   src={cctv}
                   alt="cctv"
+                  className="service-icon"
                   style={{
                     width: "36px",
                     height: "36px",
@@ -176,6 +178,7 @@ const Servicios = ({ darkMode }) => {
                 <img
                   src={camarero}
                   alt="camarero"
+                  className="service-icon"
                   style={{
                     width: "36px",
                     height: "36px",
@@ -220,6 +223,7 @@ const Servicios = ({ darkMode }) => {
                 <img
                   src={salud}
                   alt="salud"
+                  className="service-icon"
                   style={{
                     width: "36px",
                     height: "36px",
@@ -262,6 +266,7 @@ const Servicios = ({ darkMode }) => {
                 <img
                   src={dj}
                   alt="Musica"
+                  className="service-icon"
                   style={{
                     width: "36px",
                     height: "36px",
@@ -306,6 +311,7 @@ const Servicios = ({ darkMode }) => {
                 <img
                   src={luces}
                   alt="Iluminacion"
+                  className="service-icon"
                   style={{
                     width: "36px",
                     height: "36px",
@@ -348,6 +354,7 @@ const Servicios = ({ darkMode }) => {
                 <img
                   src={mesas}
                   alt="Mesas"
+                  className="service-icon"
                   style={{
                     width: "36px",
                     height: "36px",

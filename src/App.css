@@ -374,6 +374,11 @@ body.dark-mode .btn-close-salon:hover {
   background-color: #666;
 }
 
+/* Servicios */
+
+.service-icon {
+  border-radius: 0.25em;
+}
 /* -------------------------------
    CONTACTO SECTION
 --------------------------------*/
