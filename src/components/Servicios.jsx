@@ -1,13 +1,12 @@
 import React from "react";
-import {
-  Gift,
-  Users,
-  Building2,
-  Shield,
-  Headphones,
-  Lightbulb,
-  Armchair,
-} from "lucide-react";
+
+import building from "../assets/images/building.png";
+import cctv from "../assets/images/cctv.png";
+import camarero from "../assets/images/camarero.png";
+import salud from "../assets/images/salud.png";
+import dj from "../assets/images/dj.png";
+import luces from "../assets/images/luces.png";
+import mesas from "../assets/images/mesas.png";
 
 const Servicios = ({ darkMode }) => {
   const serviciosData = {
@@ -91,16 +90,22 @@ const Servicios = ({ darkMode }) => {
         </div>
 
         <div className="row g-4 mb-4">
-          <div className="col-lg-6" data-aos="fade-right">
+          <div className="col-lg-6 col-md-6" data-aos="fade-right">
             <div
               className={`p-4 h-100 ${
                 darkMode ? "bg-dark" : "bg-white"
               } shadow-sm rounded`}
             >
               <div className="d-flex align-items-center mb-4">
-                <Building2
-                  size={32}
-                  style={{ color: "#c0c0c0", marginRight: "15px" }}
+                <img
+                  src={building}
+                  alt="Building"
+                  style={{
+                    width: "36px",
+                    height: "36px",
+                    marginRight: "15px",
+                    objectFit: "contain",
+                  }}
                 />
                 <h4
                   className="service-title fw-bold mb-0"
@@ -127,16 +132,22 @@ const Servicios = ({ darkMode }) => {
             </div>
           </div>
 
-          <div className="col-lg-6" data-aos="fade-left">
+          <div className="col-lg-6 col-md-6" data-aos="fade-left">
             <div
               className={`p-4 h-100 ${
                 darkMode ? "bg-dark" : "bg-white"
               } shadow-sm rounded`}
             >
               <div className="d-flex align-items-center mb-4">
-                <Shield
-                  size={32}
-                  style={{ color: "#c0c0c0", marginRight: "15px" }}
+                <img
+                  src={cctv}
+                  alt="cctv"
+                  style={{
+                    width: "36px",
+                    height: "36px",
+                    marginRight: "15px",
+                    objectFit: "contain",
+                  }}
                 />
                 <h4
                   className="service-title fw-bold mb-0"
@@ -162,9 +173,15 @@ const Servicios = ({ darkMode }) => {
               </ul>
 
               <div className="d-flex align-items-center mb-4 mt-5">
-                <Gift
-                  size={32}
-                  style={{ color: "#c0c0c0", marginRight: "15px" }}
+                <img
+                  src={camarero}
+                  alt="camarero"
+                  style={{
+                    width: "36px",
+                    height: "36px",
+                    marginRight: "15px",
+                    objectFit: "contain",
+                  }}
                 />
                 <h4
                   className="service-title fw-bold mb-0"
@@ -193,16 +210,22 @@ const Servicios = ({ darkMode }) => {
         </div>
 
         <div className="row g-4 mb-4">
-          <div className="col-lg-6" data-aos="fade-right">
+          <div className="col-lg-6 col-md-6" data-aos="fade-right">
             <div
               className={`p-4 h-100 ${
                 darkMode ? "bg-dark" : "bg-white"
               } shadow-sm rounded`}
             >
               <div className="d-flex align-items-center mb-4">
-                <Users
-                  size={32}
-                  style={{ color: "#c0c0c0", marginRight: "15px" }}
+                <img
+                  src={salud}
+                  alt="salud"
+                  style={{
+                    width: "36px",
+                    height: "36px",
+                    marginRight: "15px",
+                    objectFit: "contain",
+                  }}
                 />
                 <h4
                   className="service-title fw-bold mb-0"
@@ -229,16 +252,22 @@ const Servicios = ({ darkMode }) => {
             </div>
           </div>
 
-          <div className="col-lg-6" data-aos="fade-left">
+          <div className="col-lg-6 col-md-6" data-aos="fade-left">
             <div
               className={`p-4 h-100 ${
                 darkMode ? "bg-dark" : "bg-white"
               } shadow-sm rounded`}
             >
               <div className="d-flex align-items-center mb-4">
-                <Headphones
-                  size={32}
-                  style={{ color: "#c0c0c0", marginRight: "15px" }}
+                <img
+                  src={dj}
+                  alt="Musica"
+                  style={{
+                    width: "36px",
+                    height: "36px",
+                    marginRight: "15px",
+                    objectFit: "contain",
+                  }}
                 />
                 <h4
                   className="service-title fw-bold mb-0"
@@ -267,16 +296,22 @@ const Servicios = ({ darkMode }) => {
         </div>
 
         <div className="row g-4">
-          <div className="col-lg-6" data-aos="fade-right">
+          <div className="col-lg-6 col-md-6" data-aos="fade-right">
             <div
               className={`p-4 h-100 ${
                 darkMode ? "bg-dark" : "bg-white"
               } shadow-sm rounded`}
             >
               <div className="d-flex align-items-center mb-4">
-                <Lightbulb
-                  size={32}
-                  style={{ color: "#c0c0c0", marginRight: "15px" }}
+                <img
+                  src={luces}
+                  alt="Iluminacion"
+                  style={{
+                    width: "36px",
+                    height: "36px",
+                    marginRight: "15px",
+                    objectFit: "contain",
+                  }}
                 />
                 <h4
                   className="service-title fw-bold mb-0"
@@ -303,16 +338,22 @@ const Servicios = ({ darkMode }) => {
             </div>
           </div>
 
-          <div className="col-lg-6" data-aos="fade-left">
+          <div className="col-lg-6 col-md-6" data-aos="fade-left">
             <div
               className={`p-4 h-100 ${
                 darkMode ? "bg-dark" : "bg-white"
               } shadow-sm rounded`}
             >
               <div className="d-flex align-items-center mb-4">
-                <Armchair
-                  size={32}
-                  style={{ color: "#c0c0c0", marginRight: "15px" }}
+                <img
+                  src={mesas}
+                  alt="Mesas"
+                  style={{
+                    width: "36px",
+                    height: "36px",
+                    marginRight: "15px",
+                    objectFit: "contain",
+                  }}
                 />
                 <h4
                   className="service-title fw-bold mb-0"

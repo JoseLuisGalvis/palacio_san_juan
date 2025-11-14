@@ -269,7 +269,7 @@ const Contacto = ({ darkMode }) => {
               <Mail size={24} className="me-3 mt-1" />
               <div>
                 <h6 className="fw-bold">Email</h6>
-                <p className="mail-text">palaciossanjuaneventos@gmail.com</p>
+                <p className="mail-text">palaciosanjuaneventos@gmail.com</p>
               </div>
             </div>
 
@@ -278,7 +278,7 @@ const Contacto = ({ darkMode }) => {
               <div>
                 <h6 className="fw-bold">Horario de Atención (Cita Previa)</h6>
                 <p>
-                  Lunes a Viernes: 10:00 - 19:00
+                  Lunes a Viernes: 09:00 - 19:00
                   <br />
                   Sábados: 10:00 - 14:00
                 </p>

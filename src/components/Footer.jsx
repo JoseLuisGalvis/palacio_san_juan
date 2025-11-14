@@ -1,33 +1,35 @@
 import React from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
-import logo from "../assets/images/logo.png";
 import logoWhite from "../assets/images/logoWhite.png";
+import qr from "../assets/images/qr.png";
 
 const Footer = ({ darkMode, scrollToSection }) => {
   return (
     <footer className={`py-5 ${darkMode ? "bg-dark" : "bg-dark"} text-light`}>
       <div className="container">
         <div className="row g-4">
-          <div className="col-md-3 text-center">
-            <a className="navbar-brand d-flex align-items-center" href="#">
-              {/* Ícono decorativo del logo - IZQUIERDA */}
+          <div className="col-md-3 d-flex flex-column align-items-center text-center">
+            <a
+              className="navbar-brand d-flex flex-column align-items-center"
+              href="#"
+            >
+              {/* Ícono decorativo del logo - ARRIBA */}
               <img
-                src={darkMode ? logoWhite : logo}
+                src={logoWhite}
                 alt="Palacio San Juan"
                 className="logo-icon"
                 style={{
                   height: "55px",
                   width: "auto",
-                  marginRight: "1em",
-                  filter: darkMode ? "brightness(1.1)" : "none",
+                  marginBottom: "0.5em",
                 }}
               />
 
-              {/* Contenedor de texto - DERECHA */}
-              <div className="d-flex flex-column">
+              {/* Contenedor de texto - ABAJO */}
+              <div className="d-flex flex-column align-items-center">
                 {/* Título principal */}
                 <div
-                  className="logo-title"
+                  className="logo-title-footer"
                   style={{
                     fontSize: "1.1rem",
                     fontWeight: "400",
@@ -44,7 +46,7 @@ const Footer = ({ darkMode, scrollToSection }) => {
 
                 {/* Línea decorativa con texto EVENTOS */}
                 <div
-                  className="logo-subtitle"
+                  className="logo-subtitle-footer mb-2"
                   style={{
                     display: "flex",
                     alignItems: "center",
@@ -88,7 +90,10 @@ const Footer = ({ darkMode, scrollToSection }) => {
           </div>
 
           <div className="col-md-3">
-            <h6 className="fw-bold mb-3" style={{ color: "#ffff" }}>
+            <h6
+              className="fw-bold mb-3 col-title-footer"
+              style={{ color: "#ffff" }}
+            >
               Enlaces Rápidos
             </h6>
             <ul className="list-unstyled">
@@ -143,20 +148,32 @@ const Footer = ({ darkMode, scrollToSection }) => {
             </ul>
           </div>
 
-          <div className="col-md-3">
-            <h6 className="fw-bold mb-3" style={{ color: "#ffff" }}>
-              Servicios
+          <div className="col-md-2">
+            <h6
+              className="fw-bold mb-3 col-title-footer"
+              style={{ color: "#ffff" }}
+            >
+              QR
             </h6>
-            <ul className="list-unstyled">
-              <li className="mb-2">Bodas</li>
-              <li className="mb-2">XV Años</li>
-              <li className="mb-2">Cumpleaños</li>
-              <li className="mb-2">Eventos Corporativos</li>
-            </ul>
+            {/* Ícono decorativo del logo - ARRIBA */}
+            <img
+              src={qr}
+              alt="QR Ws Palacio San Juan"
+              className="qr-icon"
+              style={{
+                height: "100px",
+                width: "auto",
+                marginBottom: "0.5em",
+                borderRadius: "0.5em",
+              }}
+            />
           </div>
 
-          <div className="col-md-3">
-            <h6 className="fw-bold mb-3" style={{ color: "#ffff" }}>
+          <div className="col-md-4">
+            <h6
+              className="fw-bold mb-3 col-title-footer"
+              style={{ color: "#ffff" }}
+            >
               Contacto
             </h6>
             <p className="mb-2">

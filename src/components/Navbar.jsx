@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Sun, Moon, Menu, X } from "lucide-react";
-import logo from "../assets/images/logo.png";
-import logoWhite from "../assets/images/logoWhite.png";
+import logo from "../assets/images/PSJLogo.png";
+import logoWhite from "../assets/images/PSJLogoWhite.png";
 import ws_icono from "../assets/icons/silverWs.png";
 
 const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
@@ -44,61 +44,12 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
             className="logo-icon"
             loading="lazy"
             style={{
-              height: "55px",
+              height: "80px",
               width: "auto",
               filter: darkMode ? "none" : "brightness(1.05)",
               transition: "all 0.3s ease",
             }}
           />
-          <div className="d-flex flex-column">
-            <div
-              className="logo-title"
-              style={{
-                fontFamily: "'Cinzel', serif",
-                fontSize: "1.3rem",
-                fontWeight: "600",
-                letterSpacing: "0.15em",
-                color: darkMode ? "#fff" : "#2c3e50",
-                marginBottom: "2px",
-                whiteSpace: "nowrap",
-                lineHeight: "1.2",
-              }}
-            >
-              PALACIO SAN JUAN
-            </div>
-            <div
-              className="logo-subtitle"
-              style={{
-                fontFamily: "'Montserrat', sans-serif",
-                display: "flex",
-                alignItems: "center",
-                gap: "10px",
-                fontSize: "0.65rem",
-                fontWeight: "400",
-                letterSpacing: "0.35em",
-                color: darkMode ? "#a0a0a0" : "#2c3e50",
-                whiteSpace: "nowrap",
-              }}
-            >
-              <div
-                className="logo-line"
-                style={{
-                  width: "45px",
-                  height: "1px",
-                  backgroundColor: darkMode ? "#a0a0a0" : "#2c3e50",
-                }}
-              ></div>
-              <span>EVENTOS</span>
-              <div
-                className="logo-line"
-                style={{
-                  width: "45px",
-                  height: "1px",
-                  backgroundColor: darkMode ? "#a0a0a0" : "#2c3e50",
-                }}
-              ></div>
-            </div>
-          </div>
         </a>
 
         {/* ====== BOTONES MODO OSCURO + MENÚ ====== */}

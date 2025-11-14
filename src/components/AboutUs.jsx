@@ -1,23 +1,25 @@
 import React from "react";
-import { Star, Users } from "lucide-react";
+import { Users } from "lucide-react";
 import aboutUs from "../assets/images/aboutUs.webp";
 
 const AboutUs = ({ darkMode }) => {
   return (
     <section
       id="about"
-      className={`about-section py-5 ${darkMode ? "bg-dark" : "bg-white"}`}
+      className={`about-section py-5 ${
+        darkMode ? "bg-dark text-light" : "bg-white text-dark"
+      }`}
     >
       <div className="container py-5">
         <div className="row align-items-center">
-          {/* 🔹 Imagen con borde dorado animado */}
+          {/* 🔹 Imagen */}
           <div
             className="col-lg-6 mb-4 mb-lg-0"
             data-aos="fade-right"
             data-aos-duration="1200"
             data-aos-delay="200"
           >
-            <div className="about-image-wrapper">
+            <div className="about-image-wrapper position-relative">
               <img
                 src={aboutUs}
                 alt="Palacio San Juan Interior"
@@ -30,7 +32,7 @@ const AboutUs = ({ darkMode }) => {
             </div>
           </div>
 
-          {/* 🔹 Texto descriptivo animado */}
+          {/* 🔹 Texto */}
           <div
             className="col-lg-6"
             data-aos="fade-left"
@@ -38,37 +40,32 @@ const AboutUs = ({ darkMode }) => {
             data-aos-delay="400"
           >
             <div className="about-text">
-              <h2 className="about-title display-5 fw-bold mb-4">
-                Sobre Nosotros
-              </h2>
-              <p className="fs-5 mb-4">
-                Con más de 20 años de experiencia,{" "}
-                <strong>Palacio San Juan</strong> se ha convertido en el lugar
-                predilecto para celebrar los momentos más importantes de la
-                vida.
-              </p>
-              <p className="mb-4">
-                Ubicados en el corazón de Quilmes, ofrecemos instalaciones de
-                primer nivel, atención personalizada y un equipo profesional
-                dedicado a hacer realidad cada detalle de tu evento soñado.
+              <h2 className="about-title fw-bold mb-4">Sobre Nosotros</h2>
+
+              <p className="mb-4 text-start text-md-justify about-paragraph">
+                Ubicado a minutos del centro de Quilmes, se encuentra Palacio
+                San Juan, un espacio único que no podes dejar de conocer, con
+                arquitectura francesa y fachada de categoría ofrece en su
+                interior instalaciones de primer nivel, atención personalizada y
+                un equipo profesional dedicado a hacer realidad cada detalle
+                para que seas el verdadero anfitrión de tu evento.
               </p>
 
-              <div className="row g-3">
-                <div className="col-6">
-                  <div className="about-stat d-flex align-items-center">
-                    <Star size={32} className="about-icon me-2" />
-                    <div>
-                      <h5 className="mb-0">500+</h5>
-                      <small>Eventos exitosos</small>
-                    </div>
-                  </div>
-                </div>
+              <p className="mb-4 text-start text-md-justify about-paragraph">
+                Momentos especiales de tu vida que vamos a acompañarte:
+                <br />
+                <span>
+                  Fiestas de 15 - Bodas - Bar/Bat Mitzvah - Cumpleaños -
+                  Corporativos - Egresados - Publicidad
+                </span>
+              </p>
 
-                <div className="col-6">
-                  <div className="about-stat d-flex align-items-center">
+              <div className="row g-3 text-center text-md-start">
+                <div className="col-12 col-md-6">
+                  <div className="about-stat d-flex align-items-center justify-content-center justify-content-md-start">
                     <Users size={32} className="about-icon me-2" />
                     <div>
-                      <h5 className="mb-0">300</h5>
+                      <h5 className="mb-0 fw-bold">130</h5>
                       <small>Capacidad</small>
                     </div>
                   </div>

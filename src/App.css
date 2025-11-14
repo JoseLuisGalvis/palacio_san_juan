@@ -153,6 +153,56 @@ body.dark-mode .btn-link {
   transform: translateY(-4px); /* efecto flotante */
 }
 
+/* ------------------------------------------
+   ABOUT US – ESTILO GLOBAL
+-------------------------------------------*/
+
+/* Imagen + borde animado */
+.about-image-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+}
+
+.about-image {
+  border-radius: 20px;
+}
+
+/* ------------------------------------------
+   TIPOGRAFÍA
+-------------------------------------------*/
+.about-title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+@media (max-width: 576px) {
+  .about-title {
+    font-size: 1.9rem; /* Mejor título para mobile */
+  }
+}
+
+/* Párrafos optimizados */
+.about-paragraph {
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* Justificación SOLO tablet/desktop */
+@media (min-width: 768px) {
+  .text-md-justify {
+    text-align: justify;
+  }
+}
+
+/* ------------------------------------------
+   SECCIÓN GENERAL
+-------------------------------------------*/
+.about-section {
+  scroll-margin-top: 100px;
+}
+
 /* -------------------------------
    SALONES SECTION
 --------------------------------*/
@@ -366,6 +416,13 @@ body.dark-mode .catering-section .section-title {
 /* -------------------------------
         RESPONSIVE 
 --------------------------------*/
+/* max-width: 991.98px  */
+@media (max-width: 1030px) {
+  /* Footer */
+  .mail-text {
+    font-size: 0.67em !important;
+  }
+}
 
 /* max-width: 991.98px  */
 @media (max-width: 991.98px) {
@@ -383,6 +440,29 @@ body.dark-mode .catering-section .section-title {
   /* Asegurar que los botones no se salgan */
   .d-flex.align-items-center {
     flex-shrink: 0;
+  }
+
+  /* Footer */
+  footer .logo-title-footer {
+    font-size: 0.85rem !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  footer .logo-subtitle-footer {
+    font-size: 0.5rem !important;
+    gap: 6px !important;
+  }
+
+  footer .logo-line {
+    width: 30px !important;
+  }
+}
+
+/* max-width: 768px  */
+
+@media (min-width: 768px) {
+  .col-title-footer {
+    margin-top: 3.8em !important;
   }
 }
 
@@ -421,6 +501,24 @@ body.dark-mode .catering-section .section-title {
 
   .section-title {
     font-size: 2rem;
+  }
+
+  footer .logo-title-footer {
+    font-size: 0.85rem !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  footer .logo-subtitle-footer {
+    font-size: 0.5rem !important;
+    gap: 6px !important;
+  }
+
+  footer .logo-line {
+    width: 30px !important;
+  }
+
+  .mail-text {
+    font-size: 0.64em !important;
   }
 }
 
@@ -488,5 +586,9 @@ body.dark-mode .catering-section .section-title {
   /* Footer */
   .mail-text {
     font-size: 0.7em !important;
+  }
+
+  .footer-message {
+    text-align: left !important;
   }
 }
