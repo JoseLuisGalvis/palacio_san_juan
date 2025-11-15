@@ -99,7 +99,7 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
 
             {/* Icono WhatsApp */}
             <a
-              href="https://wa.me/1133649070"
+              href="https://wa.link/ss5sx3"
               target="_blank"
               rel="noopener noreferrer"
               className="silverWs ms-auto"

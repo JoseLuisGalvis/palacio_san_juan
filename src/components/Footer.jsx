@@ -90,10 +90,7 @@ const Footer = ({ darkMode, scrollToSection }) => {
           </div>
 
           <div className="col-md-3">
-            <h6
-              className="fw-bold mb-3 col-title-footer"
-              style={{ color: "#ffff" }}
-            >
+            <h6 className="mb-3 col-title-footer" style={{ color: "#ffff" }}>
               Enlaces Rápidos
             </h6>
             <ul className="list-unstyled">
@@ -149,10 +146,7 @@ const Footer = ({ darkMode, scrollToSection }) => {
           </div>
 
           <div className="col-md-2">
-            <h6
-              className="fw-bold mb-3 col-title-footer"
-              style={{ color: "#ffff" }}
-            >
+            <h6 className="mb-3 col-title-footer" style={{ color: "#ffff" }}>
               WhatsApp - QR
             </h6>
             {/* Ícono decorativo del logo - ARRIBA */}
@@ -170,10 +164,7 @@ const Footer = ({ darkMode, scrollToSection }) => {
           </div>
 
           <div className="col-md-4">
-            <h6
-              className="fw-bold mb-3 col-title-footer"
-              style={{ color: "#ffff" }}
-            >
+            <h6 className="mb-3 col-title-footer" style={{ color: "#ffff" }}>
               Contacto
             </h6>
             <p className="mb-2">
@@ -191,7 +182,7 @@ const Footer = ({ darkMode, scrollToSection }) => {
           </div>
         </div>
 
-        <hr className="my-4" style={{ borderColor: "#d4af37" }} />
+        <hr className="my-4" style={{ borderColor: "#ffff" }} />
 
         <div className="text-center">
           <p className="mb-0">
