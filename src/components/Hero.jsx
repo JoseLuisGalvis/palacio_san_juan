@@ -23,7 +23,7 @@ const Hero = ({ scrollToSection }) => {
       {/* 🔹 Contenido visible arriba del video */}
       <div className="hero-content container text-white position-relative">
         <h1
-          className="display-3 fw-bold mb-4"
+          className="display-3 mb-4"
           data-aos="zoom-in"
           data-aos-duration="1000"
         >
