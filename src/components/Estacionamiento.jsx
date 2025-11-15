@@ -16,7 +16,7 @@ const Estacionamiento = ({ darkMode }) => {
           data-aos="fade-right"
           data-aos-duration="1200"
         >
-          <h3 className="mb-3">Estacionamiento</h3>
+          <h3 className="mb-3">ESTACIONAMIENTO</h3>
           <p className="text-start text-md-justify">
             Contamos con estacionamiento propio para brindar seguridad y
             comodidad a tus invitados.

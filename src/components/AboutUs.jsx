@@ -40,7 +40,7 @@ const AboutUs = ({ darkMode }) => {
             data-aos-delay="400"
           >
             <div className="about-text">
-              <h2 className="about-title mb-4">Sobre Nosotros</h2>
+              <h2 className="about-title mb-4">SOBRE NOSOTROS</h2>
 
               <p className="mb-4 text-start text-md-justify about-paragraph">
                 Ubicado a minutos del centro de Quilmes, se encuentra Palacio

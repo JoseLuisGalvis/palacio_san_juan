@@ -243,7 +243,7 @@ const Contacto = ({ darkMode }) => {
         <div className="row">
           <div className="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
             <h2 className="contact-title display-5 text-dark mb-4">
-              Contáctanos
+              CONTÁCTANOS
             </h2>
             <p className="lead mb-4">
               Estamos listos para hacer realidad tu evento soñado

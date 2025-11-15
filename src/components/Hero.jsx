@@ -27,7 +27,7 @@ const Hero = ({ scrollToSection }) => {
           data-aos="zoom-in"
           data-aos-duration="1000"
         >
-          Palacio San Juan
+          PALACIO SAN JUAN
         </h1>
 
         <p
