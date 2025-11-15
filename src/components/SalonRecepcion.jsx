@@ -16,7 +16,7 @@ const SalonRecepcion = ({ darkMode }) => {
           data-aos="fade-right"
           data-aos-duration="1200"
         >
-          <h3 className="fw-bold mb-3">Recepción</h3>
+          <h3 className="mb-3">Recepción</h3>
           <p className="text-start text-md-justify">
             Un espacio cálido y elegante que da la bienvenida a tus invitados.
             Ideal para recibir, tomar fotos y comenzar el evento con estilo.

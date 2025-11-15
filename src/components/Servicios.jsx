@@ -72,7 +72,7 @@ const Servicios = ({ darkMode }) => {
       <div className="container py-5">
         <div className="text-center mb-5">
           <h2
-            className="display-4 fw-bold mb-3"
+            className="display-4 mb-3"
             style={{ color: darkMode ? "#c0c0c0" : "#505050" }}
           >
             EL SALÓN

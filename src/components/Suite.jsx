@@ -95,7 +95,7 @@ const Suite = ({ darkMode }) => {
 
         {/* Texto */}
         <div className="col-lg-6" data-aos="fade-left" data-aos-duration="1200">
-          <h3 className="fw-bold mb-3">Suites Exclusivas</h3>
+          <h3 className="mb-3">Suites Exclusivas</h3>
           <p className="text-start text-md-justify">
             Disfrutá de suites amplias y confortables, diseñadas para ofrecer la
             mejor experiencia a los novios, artistas o invitados especiales.

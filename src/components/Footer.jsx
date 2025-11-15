@@ -153,7 +153,7 @@ const Footer = ({ darkMode, scrollToSection }) => {
               className="fw-bold mb-3 col-title-footer"
               style={{ color: "#ffff" }}
             >
-              QR
+              WhatsApp - QR
             </h6>
             {/* Ícono decorativo del logo - ARRIBA */}
             <img
