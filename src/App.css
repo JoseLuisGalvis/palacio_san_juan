@@ -104,8 +104,8 @@ body.dark-mode .btn-link {
   overflow: hidden;
 }
 
-/* 🎥 Video de fondo */
-.hero-video {
+/* 🖼️ Imagen de fondo */
+.hero-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -115,7 +115,7 @@ body.dark-mode .btn-link {
   z-index: 0;
 }
 
-/* 🌑 Overlay para oscurecer un poco el video */
+/* 🌑 Overlay para oscurecer un poco la imagen */
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -136,7 +136,7 @@ body.dark-mode .btn-link {
    BOTÓN HERO - HOVER
 --------------------------------*/
 .btn-hero {
-  background-color: #fff; /* ojo, antes pusiste #ffff (falta un f) */
+  background-color: #fff;
   border: none;
   color: #000;
   font-weight: bold;
@@ -152,7 +152,6 @@ body.dark-mode .btn-link {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   transform: translateY(-4px); /* efecto flotante */
 }
-
 /* ------------------------------------------
    ABOUT US – ESTILO GLOBAL
 -------------------------------------------*/

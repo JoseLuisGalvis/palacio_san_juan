@@ -1,5 +1,5 @@
 import React from "react";
-import videoBg from "../assets/video/video.mp4"; // ✅ importa el video local
+import fachadaImg from "../assets/images/fachada.png"; // ✅ importa la imagen local
 
 const Hero = ({ scrollToSection }) => {
   return (
@@ -7,20 +7,17 @@ const Hero = ({ scrollToSection }) => {
       id="hero"
       className="hero-section d-flex align-items-center justify-content-center text-center position-relative"
     >
-      {/* 🔹 Video de fondo */}
-      <video
-        className="hero-video"
-        src={videoBg}
-        autoPlay
-        loop
-        muted
-        playsInline
+      {/* 🔹 Imagen de fondo */}
+      <img
+        className="hero-image"
+        src={fachadaImg}
+        alt="Fachada Palacio San Juan"
       />
 
       {/* 🔹 Capa de superposición */}
       <div className="hero-overlay"></div>
 
-      {/* 🔹 Contenido visible arriba del video */}
+      {/* 🔹 Contenido visible arriba de la imagen */}
       <div className="hero-content container text-white position-relative">
         <h1
           className="display-3 mb-4"
