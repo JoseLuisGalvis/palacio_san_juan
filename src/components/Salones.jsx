@@ -1,4 +1,5 @@
 import React from "react";
+import SalonPlantaAlta from "./SalonPlantaAlta";
 import SalonRecepcion from "./SalonRecepcion";
 import Suite from "./Suite";
 import Estacionamiento from "./Estacionamiento";
@@ -13,7 +14,7 @@ const Salones = ({ darkMode }) => {
     >
       <div className="container">
         <h2 className="text-center my-5 pt-5">NUESTROS SALONES</h2>
-
+        <SalonPlantaAlta darkMode={darkMode} />
         <SalonRecepcion darkMode={darkMode} />
         <Suite darkMode={darkMode} />
         <Estacionamiento darkMode={darkMode} />
