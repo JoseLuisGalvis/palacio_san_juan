@@ -11,7 +11,7 @@ const Salones = ({ darkMode }) => {
       id="salones"
       className={`${
         darkMode ? "bg-dark text-light" : "bg-light text-dark"
-      } py-5 mt-5`}
+      } py-5`}
     >
       <div className="container">
         <h2 className="text-center my-5 pt-5">NUESTROS SALONES</h2>
