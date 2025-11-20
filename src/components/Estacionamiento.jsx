@@ -10,10 +10,23 @@ const Estacionamiento = ({ darkMode }) => {
       }`}
     >
       <div className="row align-items-center mb-5 container mx-auto">
+        {/* Imagen */}
+        <div
+          className="col-lg-6 mb-4 mb-lg-0 order-lg-1 order-1"
+          data-aos="fade-right"
+          data-aos-duration="1200"
+        >
+          <img
+            src={estacionamiento}
+            alt="Estacionamiento"
+            className="img-fluid rounded shadow-lg"
+            loading="lazy"
+          />
+        </div>
         {/* Texto */}
         <div
-          className="col-lg-6 order-lg-1 order-2"
-          data-aos="fade-right"
+          className="col-lg-6 order-lg-2 order-2"
+          data-aos="fade-left"
           data-aos-duration="1200"
         >
           <h3 className="mb-3">ESTACIONAMIENTO</h3>
@@ -35,20 +48,6 @@ const Estacionamiento = ({ darkMode }) => {
               <span>Zona segura e iluminada</span>
             </li>
           </ul>
-        </div>
-
-        {/* Imagen */}
-        <div
-          className="col-lg-6 mb-4 mb-lg-0 order-lg-2 order-1"
-          data-aos="fade-left"
-          data-aos-duration="1200"
-        >
-          <img
-            src={estacionamiento}
-            alt="Estacionamiento"
-            className="img-fluid rounded shadow-lg"
-            loading="lazy"
-          />
         </div>
       </div>
     </section>

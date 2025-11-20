@@ -2,6 +2,7 @@ import React from "react";
 import SalonPlantaAlta from "./SalonPlantaAlta";
 import SalonRecepcion from "./SalonRecepcion";
 import Suite from "./Suite";
+import Playroom from "./Playroom";
 import Estacionamiento from "./Estacionamiento";
 
 const Salones = ({ darkMode }) => {
@@ -17,6 +18,7 @@ const Salones = ({ darkMode }) => {
         <SalonPlantaAlta darkMode={darkMode} />
         <SalonRecepcion darkMode={darkMode} />
         <Suite darkMode={darkMode} />
+        <Playroom darkMode={darkMode} />
         <Estacionamiento darkMode={darkMode} />
       </div>
     </section>
