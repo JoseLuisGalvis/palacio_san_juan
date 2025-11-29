@@ -95,7 +95,7 @@ const ContactForm = ({ darkMode }) => {
         `Fecha: ${formData.fecha}%0A` +
         `Mensaje: ${formData.mensaje}`;
 
-      window.open(`https://wa.me/5491133649070?text=${mensaje}`, "_blank");
+      window.open(`https://wa.me/5491126496197?text=${mensaje}`, "_blank");
 
       alert("Tu consulta fue enviada correctamente.");
       setFormData({
