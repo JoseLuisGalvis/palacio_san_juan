@@ -35,7 +35,6 @@ const Footer = ({ darkMode, scrollToSection }) => {
                     fontWeight: "400",
                     letterSpacing: "0.15em",
                     color: darkMode ? "#ffff" : "#ffff",
-                    fontFamily: "Georgia, 'Times New Roman', serif",
                     marginBottom: "2px",
                     whiteSpace: "nowrap",
                     lineHeight: "1.2",
