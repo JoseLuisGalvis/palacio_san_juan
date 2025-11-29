@@ -40,7 +40,7 @@ const Footer = ({ darkMode, scrollToSection }) => {
                     lineHeight: "1.2",
                   }}
                 >
-                  PALACIO SAN JUAN
+                  <h6>PALACIO SAN JUAN</h6>
                 </div>
 
                 {/* Línea decorativa con texto EVENTOS */}
