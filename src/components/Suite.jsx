@@ -147,8 +147,9 @@ const Suite = ({ darkMode }) => {
         <div className="col-lg-6" data-aos="fade-left" data-aos-duration="1200">
           <h3 className="mb-3">SUITES EXCLUSIVAS</h3>
           <p className="text-start text-md-justify">
-            Disfrutá de suites amplias y confortables, diseñadas para ofrecer la
-            mejor experiencia a los novios, artistas o invitados especiales.
+            En nuestras Suites encontrarás espacios pensados y creados para que
+            disfrutes cada momento. Con variedad de amenities y confort para
+            preparate para tus 15, tu boda o tu evento especial.
           </p>
           <ul className="list-unstyled">
             <li className="mb-2 d-flex align-items-start">
@@ -161,7 +162,7 @@ const Suite = ({ darkMode }) => {
             </li>
             <li className="mb-2 d-flex align-items-start">
               <Users size={20} className="me-2 mt-1 flex-shrink-0" />
-              <span>Ideal para novios e invitados VIP</span>
+              <span>Ideal para quinceañeras y novios</span>
             </li>
           </ul>
         </div>

@@ -83,10 +83,7 @@ const Footer = ({ darkMode, scrollToSection }) => {
                 </div>
               </div>
             </a>
-            <p className="footer-message">
-              El lugar ideal para tus eventos más especiales. Creando momentos
-              inolvidables desde 2003.
-            </p>
+            <p className="footer-message">Creadores de momentos inolvidales.</p>
           </div>
 
           <div className="col-md-3">

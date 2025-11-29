@@ -24,7 +24,8 @@ const Playroom = ({ darkMode }) => {
           <p className="text-start text-md-justify">
             Un espacio especialmente diseñado para que los más pequeños se
             diviertan de forma segura mientras los adultos disfrutan del evento.
-            Con juegos, entretenimiento y supervisión profesional.
+            Con juegos, entretenimiento y supervisión profesional. Ambientado
+            para niños de hasta 6 años.
           </p>
           <ul className="list-unstyled">
             <li className="mb-2 d-flex align-items-start">

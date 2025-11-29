@@ -245,9 +245,7 @@ const Contacto = ({ darkMode }) => {
             <h2 className="contact-title display-5 text-dark mb-4">
               CONTÁCTANOS
             </h2>
-            <p className="lead mb-4">
-              Estamos listos para hacer realidad tu evento soñado
-            </p>
+            <p className="lead mb-4">Hagamos realidad tu evento soñado</p>
 
             <div className="mb-3 d-flex align-items-start">
               <MapPin size={24} className="me-3 mt-1" />
