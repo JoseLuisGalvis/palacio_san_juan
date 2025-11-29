@@ -83,7 +83,9 @@ const Footer = ({ darkMode, scrollToSection }) => {
                 </div>
               </div>
             </a>
-            <p className="footer-message">Creadores de momentos inolvidales.</p>
+            <p className="footer-message">
+              Creadores de momentos inolvidables.
+            </p>
           </div>
 
           <div className="col-md-3">

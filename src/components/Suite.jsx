@@ -149,7 +149,7 @@ const Suite = ({ darkMode }) => {
           <p className="text-start text-md-justify">
             En nuestras Suites encontrarás espacios pensados y creados para que
             disfrutes cada momento. Con variedad de amenities y confort para
-            preparate para tus 15, tu boda o tu evento especial.
+            prepararte para tus 15, tu boda o tu evento especial.
           </p>
           <ul className="list-unstyled">
             <li className="mb-2 d-flex align-items-start">
