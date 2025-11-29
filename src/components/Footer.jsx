@@ -1,5 +1,5 @@
 import React from "react";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Globe } from "lucide-react";
 import logoWhite from "../assets/images/logoWhite.png";
 import qr from "../assets/images/qr.png";
 
@@ -177,6 +177,17 @@ const Footer = ({ darkMode, scrollToSection }) => {
             <p className="mb-2 mail-text">
               <Mail size={16} className="me-2" />
               palaciosanjuaneventos@gmail.com
+            </p>
+            <p className="mb-2">
+              <Globe size={16} className="me-2" />
+              <a
+                href="https://www.palaciosanjuan.com.ar"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                www.palaciosanjuan.com.ar
+              </a>
             </p>
           </div>
         </div>
