@@ -12,7 +12,7 @@ const customIcon = new L.Icon({
 });
 
 const SalonMap = () => {
-  // Coordenadas del salón (Quilmes)
+  // Coordenadas del Salón (Quilmes)
   const position = [-34.72505431814435, -58.28005018583646];
 
   return (
