@@ -18,7 +18,7 @@ function App() {
   // ================================
   // Estado Dark Mode
   // ================================
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   // 🔹 Hook para aplicar la clase dark-mode al body
   useEffect(() => {
