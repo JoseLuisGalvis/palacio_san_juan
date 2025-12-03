@@ -52,8 +52,27 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
           />
         </a>
 
-        {/* ====== BOTONES MODO OSCURO + MENÚ ====== */}
-        <div className="d-flex align-items-center">
+        {/* ====== BOTONES WHATSAPP + MODO OSCURO + MENÚ (MOBILE) ====== */}
+        <div className="d-flex align-items-center gap-2">
+          {/* Botón WhatsApp - visible en mobile */}
+          <a
+            href="https://wa.link/ss5sx3"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="d-lg-none"
+            aria-label="WhatsApp"
+          >
+            <img
+              src={ws_icono}
+              alt="WhatsApp"
+              loading="lazy"
+              width="40"
+              height="40"
+              style={{ display: "block" }}
+            />
+          </a>
+
+          {/* Botón Dark Mode - mobile */}
           <button
             className="btn btn-link text-decoration-none p-2 d-lg-none"
             onClick={toggleDarkMode}
@@ -63,6 +82,7 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
             {darkMode ? <Sun size={22} /> : <Moon size={22} />}
           </button>
 
+          {/* Botón Hamburguesa - mobile */}
           <button
             className="btn btn-link text-decoration-none p-2 d-lg-none"
             onClick={toggleMenu}
@@ -97,12 +117,12 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
               </li>
             ))}
 
-            {/* Icono WhatsApp */}
+            {/* Icono WhatsApp - desktop */}
             <a
               href="https://wa.link/ss5sx3"
               target="_blank"
               rel="noopener noreferrer"
-              className="silverWs ms-auto"
+              className="silverWs ms-lg-3 d-none d-lg-block"
             >
               <img
                 src={ws_icono}
@@ -114,7 +134,7 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
               />
             </a>
 
-            {/* Botón modo oscuro (desktop) */}
+            {/* Botón modo oscuro - desktop */}
             <li className="nav-item ms-lg-3 d-none d-lg-block">
               <button
                 className="btn btn-link text-decoration-none"

@@ -45,7 +45,7 @@ const Playroom = ({ darkMode }) => {
           data-aos-duration="1200"
         >
           <div
-            id="suiteCarousel"
+            id="playroomCarousel"
             className="carousel slide carousel-fade"
             data-bs-ride="carousel"
             data-bs-interval="4000"
@@ -95,7 +95,7 @@ const Playroom = ({ darkMode }) => {
             <button
               className="carousel-control-prev"
               type="button"
-              data-bs-target="#suiteCarousel"
+              data-bs-target="#playroomCarousel"
               data-bs-slide="prev"
               style={{
                 opacity: 0.8,
@@ -116,7 +116,7 @@ const Playroom = ({ darkMode }) => {
             <button
               className="carousel-control-next"
               type="button"
-              data-bs-target="#suiteCarousel"
+              data-bs-target="#playroomCarousel"
               data-bs-slide="next"
               style={{
                 opacity: 0.8,
@@ -139,7 +139,7 @@ const Playroom = ({ darkMode }) => {
             <div className="carousel-indicators">
               <button
                 type="button"
-                data-bs-target="#suiteCarousel"
+                data-bs-target="#playroomCarousel"
                 data-bs-slide-to="0"
                 className="active"
                 aria-current="true"
@@ -153,7 +153,7 @@ const Playroom = ({ darkMode }) => {
               ></button>
               <button
                 type="button"
-                data-bs-target="#suiteCarousel"
+                data-bs-target="#playroomCarousel"
                 data-bs-slide-to="1"
                 aria-label="Slide 2"
                 style={{
