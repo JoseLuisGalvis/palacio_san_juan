@@ -24,17 +24,13 @@ const Playroom = ({ darkMode }) => {
           <p className="text-start text-md-justify">
             Un espacio especialmente diseñado para que los más pequeños se
             diviertan de forma segura mientras los adultos disfrutan del evento.
-            Con juegos, entretenimiento y supervisión profesional. Ambientado
-            para niños de hasta 6 años.
+            Con juegos y entretenimiento. Ambientado con estilo Montessori para
+            niños de hasta 6 años.
           </p>
           <ul className="list-unstyled">
             <li className="mb-2 d-flex align-items-start">
               <Sparkles size={20} className="me-2 mt-1 flex-shrink-0" />
               <span>Zona colorida y estimulante</span>
-            </li>
-            <li className="mb-2 d-flex align-items-start">
-              <Users size={20} className="me-2 mt-1 flex-shrink-0" />
-              <span>Supervisión y cuidado permanente</span>
             </li>
             <li className="mb-2 d-flex align-items-start">
               <Bed size={20} className="me-2 mt-1 flex-shrink-0" />

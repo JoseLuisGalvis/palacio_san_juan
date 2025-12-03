@@ -50,6 +50,11 @@ const AboutUs = ({ darkMode }) => {
                 un equipo profesional dedicado a hacer realidad cada detalle
                 para que seas el verdadero anfitrión de tu evento.
               </p>
+              <p>
+                Brindamos un servicio integral: Salón, Catering, Barra libre,
+                Coordinacion de evento, Dj, Sonido, Iluminación, ambientación y
+                más...
+              </p>
 
               <p className="mb-4 text-start text-md-justify about-paragraph">
                 Momentos especiales de tu vida que vamos a acompañarte:

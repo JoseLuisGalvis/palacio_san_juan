@@ -416,6 +416,18 @@ body.dark-mode .catering-section .section-title {
 .mail-text {
   font-size: 0.9em !important;
 }
+/* Estilos para los links del Footer con hover plateado */
+.footer-link-hover {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-link-hover:hover {
+  color: #d1cfcf !important;
+  text-shadow: 0 10px 10px rgba(241, 237, 237, 0.2);
+  font-weight: 700 !important;
+}
 
 /* -------------------------------
         RESPONSIVE 
@@ -489,7 +501,7 @@ body.dark-mode .catering-section .section-title {
 --------------------------------*/
   @media (max-width: 575.98px) {
     .hero-content h1 {
-      font-size: 1.5rem; /* 👈 Aún más chico */
+      font-size: 1.3rem; /* 👈 Aún más chico */
       white-space: nowrap;
     }
 
@@ -631,7 +643,7 @@ body.dark-mode .catering-section .section-title {
   }
 
   .lead {
-    font-size: 1.5em !important;
+    font-size: 1.1em !important;
   }
   .section-title {
     font-size: 1.75rem;
@@ -639,6 +651,10 @@ body.dark-mode .catering-section .section-title {
 
   .salon-name {
     font-size: 1.5em !important;
+  }
+
+  .parking-title {
+    font-size: 1em !important;
   }
 
   .service-title {

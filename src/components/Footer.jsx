@@ -1,5 +1,5 @@
 import React from "react";
-import { MapPin, Phone, Mail, Globe } from "lucide-react";
+import { MapPin, Phone, Mail, Globe, Instagram } from "lucide-react";
 import logoWhite from "../assets/images/logoWhite.png";
 import qr from "../assets/images/qr.png";
 
@@ -95,7 +95,7 @@ const Footer = ({ darkMode, scrollToSection }) => {
               <li className="mb-2">
                 <a
                   href="#"
-                  className="text-light text-decoration-none"
+                  className="text-light text-decoration-none footer-link-hover"
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSection("hero");
@@ -107,7 +107,7 @@ const Footer = ({ darkMode, scrollToSection }) => {
               <li className="mb-2">
                 <a
                   href="#"
-                  className="text-light text-decoration-none"
+                  className="text-light text-decoration-none footer-link-hover"
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSection("about");
@@ -119,7 +119,7 @@ const Footer = ({ darkMode, scrollToSection }) => {
               <li className="mb-2">
                 <a
                   href="#"
-                  className="text-light text-decoration-none"
+                  className="text-light text-decoration-none footer-link-hover"
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSection("salones");
@@ -131,7 +131,7 @@ const Footer = ({ darkMode, scrollToSection }) => {
               <li className="mb-2">
                 <a
                   href="#"
-                  className="text-light text-decoration-none"
+                  className="text-light text-decoration-none footer-link-hover"
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSection("servicios");
@@ -183,9 +183,22 @@ const Footer = ({ darkMode, scrollToSection }) => {
                 href="https://www.palaciosanjuan.com.ar"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="footer-link-hover"
                 style={{ color: "inherit", textDecoration: "none" }}
               >
                 www.palaciosanjuan.com.ar
+              </a>
+            </p>
+            <p className="mb-2">
+              <Instagram size={16} className="me-2" />
+              <a
+                href="https://www.instagram.com/palaciosanjuan/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-link-hover"
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                @palaciosanjuan
               </a>
             </p>
           </div>

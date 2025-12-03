@@ -29,7 +29,7 @@ const Estacionamiento = ({ darkMode }) => {
           data-aos="fade-left"
           data-aos-duration="1200"
         >
-          <h3 className="mb-3">ESTACIONAMIENTO</h3>
+          <h3 className="mb-3 parking-title text-break">ESTACIONAMIENTO</h3>
           <p className="text-start text-md-justify">
             Contamos con estacionamiento propio para brindar seguridad y
             comodidad a tus invitados.
@@ -37,7 +37,7 @@ const Estacionamiento = ({ darkMode }) => {
           <ul className="list-unstyled">
             <li className="mb-2 d-flex align-items-start">
               <Car size={20} className="me-2 mt-1 flex-shrink-0" />
-              <span>Acceso directo</span>
+              <span>Acceso al salón por ascensor o escalera</span>
             </li>
             <li className="mb-2 d-flex align-items-start">
               <Clock size={20} className="me-2 mt-1 flex-shrink-0" />

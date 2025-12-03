@@ -118,15 +118,15 @@ const SalonPlantaAlta = ({ darkMode }) => {
             decoración refinada y ambiente íntimo.
           </p>
 
-          <div className="d-flex gap-4 mb-3">
+          <div className="d-flex flex-wrap gap-4 mb-3">
             <div className="d-flex align-items-center">
-              <Users size={24} className="me-2" />
+              <Users size={24} className="me-2 flex-shrink-0" />
               <div>
                 <strong>130</strong> personas (cena formal)
               </div>
             </div>
             <div className="d-flex align-items-center">
-              <Users size={24} className="me-2" />
+              <Users size={24} className="me-2 flex-shrink-0" />
               <div>
                 <strong>150</strong> personas (coctel)
               </div>
@@ -149,7 +149,7 @@ const SalonPlantaAlta = ({ darkMode }) => {
               <li className="mb-2 d-flex align-items-start">
                 <Sparkles size={18} className="me-2 mt-1 flex-shrink-0" />
                 <span>
-                  Sillas Tiffanys blancas con almohadón de cuero blanco
+                  Sillas Tiffany de madera con almohadón de cuero blanco
                 </span>
               </li>
               <li className="mb-2 d-flex align-items-start">
@@ -184,12 +184,20 @@ const SalonPlantaAlta = ({ darkMode }) => {
               </li>
               <li className="mb-2 d-flex align-items-start">
                 <Sparkles size={18} className="me-2 mt-1 flex-shrink-0" />
+                <span>
+                  Suite con baño privado, decorada y equipada con gran estilo y
+                  nivel
+                </span>
+              </li>
+              <li className="mb-2 d-flex align-items-start">
+                <Sparkles size={18} className="me-2 mt-1 flex-shrink-0" />
                 <span>Baños con terminaciones de categoría y accesibles</span>
               </li>
               <li className="mb-2 d-flex align-items-start">
                 <Camera size={18} className="me-2 mt-1 flex-shrink-0" />
                 <span>Seguridad y circuito de monitoreo completo</span>
               </li>
+
               <li className="mb-2 d-flex align-items-start">
                 <MoveUp size={18} className="me-2 mt-1 flex-shrink-0" />
                 <span>Escalera y ascensor</span>
