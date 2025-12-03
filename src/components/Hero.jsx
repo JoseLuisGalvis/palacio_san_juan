@@ -1,11 +1,11 @@
 import React from "react";
-import fachadaImg from "../assets/images/fachada.png"; // ✅ importa la imagen local
+import fachadaImg from "../assets/images/fachada7.png"; // ✅ importa la imagen local
 
 const Hero = ({ scrollToSection }) => {
   return (
     <section
       id="hero"
-      className="hero-section d-flex align-items-center justify-content-center text-center position-relative"
+      className="hero-section container-fluid d-flex align-items-center justify-content-center text-center position-relative"
     >
       {/* 🔹 Imagen de fondo */}
       <img
