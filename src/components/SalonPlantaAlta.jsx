@@ -12,7 +12,7 @@ import {
   Wind,
   MoveUp,
 } from "lucide-react";
-import plantalta from "../assets/images/salon.png";
+import plantalta from "../assets/images/salon.webp";
 
 const Tilt3D = ({ children, intensity = 10, glareIntensity = 0.3 }) => {
   const [rotation, setRotation] = useState({ x: 0, y: 0 });

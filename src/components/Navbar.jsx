@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Sun, Moon, Menu, X } from "lucide-react";
 import logo from "../assets/images/PSJLogo.png";
 import logoWhite from "../assets/images/PSJLogoWhite.png";
-import ws_icono from "../assets/icons/silverWs.png";
+import ws_icono from "../assets/icons/silverWs.webp";
 
 const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -42,7 +42,7 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
             src={darkMode ? logoWhite : logo}
             alt="Palacio San Juan"
             className="logo-icon"
-            loading="lazy"
+            loading="eager"
             style={{
               height: "80px",
               width: "auto",
@@ -127,7 +127,7 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollToSection }) => {
               <img
                 src={ws_icono}
                 alt="WhatsApp"
-                loading="lazy"
+                loading="eager"
                 width="70"
                 height="70"
                 id="icon-ws"

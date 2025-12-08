@@ -1,5 +1,5 @@
 import React from "react";
-import fachadaImg from "../assets/images/fachada7.png"; // ✅ importa la imagen local
+import fachadaImg from "../assets/images/fachada7.webp"; // ✅ importa la imagen local
 
 const Hero = ({ scrollToSection }) => {
   return (
@@ -12,6 +12,7 @@ const Hero = ({ scrollToSection }) => {
         className="hero-image"
         src={fachadaImg}
         alt="Fachada Palacio San Juan"
+        loading="eager"
       />
 
       {/* 🔹 Capa de superposición */}

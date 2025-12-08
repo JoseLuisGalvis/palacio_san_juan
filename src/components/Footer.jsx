@@ -1,7 +1,7 @@
 import React from "react";
 import { MapPin, Phone, Mail, Globe, Instagram } from "lucide-react";
 import logoWhite from "../assets/images/logoWhite.png";
-import qr from "../assets/images/qr.png";
+import qr from "../assets/images/qr.webp";
 
 const Footer = ({ darkMode, scrollToSection }) => {
   return (

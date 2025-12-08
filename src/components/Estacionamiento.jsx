@@ -1,6 +1,6 @@
 import React from "react";
 import { Car, Clock, Shield } from "lucide-react";
-import estacionamiento from "../assets/images/estacionamiento.jpg";
+import estacionamiento from "../assets/images/estacionamiento.webp";
 
 const Estacionamiento = ({ darkMode }) => {
   return (

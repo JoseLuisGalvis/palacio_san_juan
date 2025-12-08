@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Sparkles, ChevronDown, ChevronUp, Users, Music } from "lucide-react";
-import recepcion from "../assets/images/recepcion.png";
+import recepcion from "../assets/images/recepcionA.webp";
 import recepcionWebp from "../assets/images/recepcion.webp";
 
 const SalonRecepcion = ({ darkMode }) => {
@@ -9,7 +9,7 @@ const SalonRecepcion = ({ darkMode }) => {
 
   return (
     <section
-      className={`py-5 ${
+      className={`py-5 salon-recepcion ${
         darkMode ? "bg-dark text-light" : "bg-white text-dark"
       }`}
     >
@@ -23,7 +23,6 @@ const SalonRecepcion = ({ darkMode }) => {
           >
             <h3 className="mb-3 text-break">SALÓN PLANTA BAJA - RECEPCIÓN</h3>
 
-            {/* Descripción principal */}
             <p className="text-start">
               Traspasando una puerta doble de cedro de gran estilo accedes a un
               recibidor amplio y luminoso, con livings elegantes y un importante
@@ -31,7 +30,7 @@ const SalonRecepcion = ({ darkMode }) => {
               nórdicos negro de pana, patas de madera y cómodos butacones altos
               con mesas tipo cafetín.
             </p>
-            {/* Capacidad destacada */}
+
             <div className="d-flex flex-wrap gap-4 mb-3">
               <div className="d-flex align-items-center">
                 <Users size={24} className="me-2 flex-shrink-0" />
@@ -49,11 +48,7 @@ const SalonRecepcion = ({ darkMode }) => {
 
             {/* Contenido expandible */}
             <div
-              style={{
-                maxHeight: expanded ? "1000px" : "0",
-                overflow: "hidden",
-                transition: "max-height 0.5s ease-in-out",
-              }}
+              className={`recepcion-expandable ${expanded ? "expanded" : ""}`}
             >
               <p className="text-start mt-3">
                 <strong>Ideal para:</strong> Recepciones, cumpleaños informales
@@ -63,6 +58,7 @@ const SalonRecepcion = ({ darkMode }) => {
               </p>
 
               <h5 className="mt-4 mb-3">Características y Servicios:</h5>
+
               <ul className="list-unstyled">
                 <li className="mb-2 d-flex align-items-start">
                   <Sparkles size={18} className="me-2 mt-1 flex-shrink-0" />
@@ -99,7 +95,6 @@ const SalonRecepcion = ({ darkMode }) => {
               </ul>
             </div>
 
-            {/* Botón expandir/colapsar */}
             <button
               onClick={() => setExpanded(!expanded)}
               className="btn btn-dark mt-3 d-flex align-items-center"
@@ -116,7 +111,7 @@ const SalonRecepcion = ({ darkMode }) => {
             </button>
           </div>
 
-          {/* Carrusel con efectos mejorados */}
+          {/* Carrusel */}
           <div
             className="col-lg-6 col-12 mb-4 mb-lg-0 order-lg-2 order-1 px-3 px-lg-4"
             data-aos="fade-left"
@@ -128,95 +123,65 @@ const SalonRecepcion = ({ darkMode }) => {
               data-bs-ride="carousel"
               data-bs-interval="4000"
             >
-              <div
-                className="carousel-inner rounded shadow-lg"
-                style={{
-                  height: "500px",
-                  overflow: "hidden",
-                }}
-              >
+              <div className="carousel-inner recepcion-carousel-inner">
                 <div className="carousel-item active h-100">
                   <img
                     src={recepcion}
-                    className="d-block w-100 h-100"
+                    className={`d-block w-100 h-100 recepcion-img ${
+                      hoveredImage === 0 ? "hovered" : ""
+                    }`}
                     alt="Salón Recepción 1"
                     loading="lazy"
-                    style={{
-                      objectFit: "cover",
-                      transform:
-                        hoveredImage === 0 ? "scale(1.05)" : "scale(1)",
-                      transition: "transform 0.5s ease",
-                      cursor: "pointer",
-                    }}
+                    width="500"
+                    height="500"
                     onMouseEnter={() => setHoveredImage(0)}
                     onMouseLeave={() => setHoveredImage(null)}
                   />
                 </div>
+
                 <div className="carousel-item h-100">
                   <img
                     src={recepcionWebp}
-                    className="d-block w-100 h-100"
+                    className={`d-block w-100 h-100 recepcion-img ${
+                      hoveredImage === 1 ? "hovered" : ""
+                    }`}
                     alt="Salón Recepción 2"
                     loading="lazy"
-                    style={{
-                      objectFit: "cover",
-                      transform:
-                        hoveredImage === 1 ? "scale(1.05)" : "scale(1)",
-                      transition: "transform 0.5s ease",
-                      cursor: "pointer",
-                    }}
+                    width="500"
+                    height="500"
                     onMouseEnter={() => setHoveredImage(1)}
                     onMouseLeave={() => setHoveredImage(null)}
                   />
                 </div>
               </div>
 
-              {/* Controles del carrusel con estilo mejorado */}
               <button
-                className="carousel-control-prev"
+                className="carousel-control-prev recepcion-control"
                 type="button"
                 data-bs-target="#recepcionCarousel"
                 data-bs-slide="prev"
-                style={{
-                  opacity: 0.8,
-                  transition: "opacity 0.3s ease",
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.opacity = "1")}
-                onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.8")}
               >
                 <span
-                  className="carousel-control-prev-icon"
+                  className="carousel-control-prev-icon recepcion-control-icon"
                   aria-hidden="true"
-                  style={{
-                    filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.5))",
-                  }}
                 ></span>
                 <span className="visually-hidden">Anterior</span>
               </button>
+
               <button
-                className="carousel-control-next"
+                className="carousel-control-next recepcion-control"
                 type="button"
                 data-bs-target="#recepcionCarousel"
                 data-bs-slide="next"
-                style={{
-                  opacity: 0.8,
-                  transition: "opacity 0.3s ease",
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.opacity = "1")}
-                onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.8")}
               >
                 <span
-                  className="carousel-control-next-icon"
+                  className="carousel-control-next-icon recepcion-control-icon"
                   aria-hidden="true"
-                  style={{
-                    filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.5))",
-                  }}
                 ></span>
                 <span className="visually-hidden">Siguiente</span>
               </button>
 
-              {/* Indicadores mejorados */}
-              <div className="carousel-indicators">
+              <div className="carousel-indicators recepcion-indicators">
                 <button
                   type="button"
                   data-bs-target="#recepcionCarousel"
@@ -224,24 +189,12 @@ const SalonRecepcion = ({ darkMode }) => {
                   className="active"
                   aria-current="true"
                   aria-label="Slide 1"
-                  style={{
-                    width: "12px",
-                    height: "12px",
-                    borderRadius: "50%",
-                    transition: "all 0.3s ease",
-                  }}
                 ></button>
                 <button
                   type="button"
                   data-bs-target="#recepcionCarousel"
                   data-bs-slide-to="1"
                   aria-label="Slide 2"
-                  style={{
-                    width: "12px",
-                    height: "12px",
-                    borderRadius: "50%",
-                    transition: "all 0.3s ease",
-                  }}
                 ></button>
               </div>
             </div>
