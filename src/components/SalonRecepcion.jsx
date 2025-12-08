@@ -1,71 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Sparkles, ChevronDown, ChevronUp, Users, Music } from "lucide-react";
 import recepcion from "../assets/images/recepcion.png";
-
-// Componente wrapper reutilizable para efecto 3D
-const Tilt3D = ({ children, intensity = 10, glareIntensity = 0.3 }) => {
-  const [rotation, setRotation] = useState({ x: 0, y: 0 });
-  const [glare, setGlare] = useState({ x: 50, y: 50, opacity: 0 });
-  const ref = useRef(null);
-
-  const handleMouseMove = (e) => {
-    if (!ref.current) return;
-
-    const element = ref.current;
-    const rect = element.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-
-    const rotateX = (y - centerY) / intensity;
-    const rotateY = (centerX - x) / intensity;
-
-    setRotation({ x: rotateX, y: rotateY });
-
-    const glareX = (x / rect.width) * 100;
-    const glareY = (y / rect.height) * 100;
-    setGlare({ x: glareX, y: glareY, opacity: glareIntensity });
-  };
-
-  const handleMouseLeave = () => {
-    setRotation({ x: 0, y: 0 });
-    setGlare({ x: 50, y: 50, opacity: 0 });
-  };
-
-  return (
-    <div
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      style={{
-        transform: `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
-        transition: "transform 0.1s ease-out",
-      }}
-      className="position-relative"
-    >
-      {children}
-      {/* Brillo dinámico */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: `radial-gradient(circle at ${glare.x}% ${glare.y}%, rgba(255,255,255,${glare.opacity}), transparent 50%)`,
-          pointerEvents: "none",
-          borderRadius: "inherit",
-          transition: "opacity 0.1s ease-out",
-        }}
-      />
-    </div>
-  );
-};
+import recepcionWebp from "../assets/images/recepcion.webp";
 
 const SalonRecepcion = ({ darkMode }) => {
   const [expanded, setExpanded] = useState(false);
+  const [hoveredImage, setHoveredImage] = useState(null);
 
   return (
     <section
@@ -176,24 +116,135 @@ const SalonRecepcion = ({ darkMode }) => {
             </button>
           </div>
 
-          {/* Imagen con efecto 3D */}
+          {/* Carrusel con efectos mejorados */}
           <div
             className="col-lg-6 col-12 mb-4 mb-lg-0 order-lg-2 order-1 px-3 px-lg-4"
             data-aos="fade-left"
             data-aos-duration="1200"
           >
-            <Tilt3D intensity={15} glareIntensity={0.2}>
-              <img
-                src={recepcion}
-                alt="Salón Recepción"
-                className="img-fluid rounded shadow-lg"
-                loading="lazy"
+            <div
+              id="recepcionCarousel"
+              className="carousel slide carousel-fade"
+              data-bs-ride="carousel"
+              data-bs-interval="4000"
+            >
+              <div
+                className="carousel-inner rounded shadow-lg"
                 style={{
-                  boxShadow: "0 20px 60px rgba(0,0,0,0.3)",
-                  transition: "box-shadow 0.3s ease",
+                  height: "500px",
+                  overflow: "hidden",
                 }}
-              />
-            </Tilt3D>
+              >
+                <div className="carousel-item active h-100">
+                  <img
+                    src={recepcion}
+                    className="d-block w-100 h-100"
+                    alt="Salón Recepción 1"
+                    loading="lazy"
+                    style={{
+                      objectFit: "cover",
+                      transform:
+                        hoveredImage === 0 ? "scale(1.05)" : "scale(1)",
+                      transition: "transform 0.5s ease",
+                      cursor: "pointer",
+                    }}
+                    onMouseEnter={() => setHoveredImage(0)}
+                    onMouseLeave={() => setHoveredImage(null)}
+                  />
+                </div>
+                <div className="carousel-item h-100">
+                  <img
+                    src={recepcionWebp}
+                    className="d-block w-100 h-100"
+                    alt="Salón Recepción 2"
+                    loading="lazy"
+                    style={{
+                      objectFit: "cover",
+                      transform:
+                        hoveredImage === 1 ? "scale(1.05)" : "scale(1)",
+                      transition: "transform 0.5s ease",
+                      cursor: "pointer",
+                    }}
+                    onMouseEnter={() => setHoveredImage(1)}
+                    onMouseLeave={() => setHoveredImage(null)}
+                  />
+                </div>
+              </div>
+
+              {/* Controles del carrusel con estilo mejorado */}
+              <button
+                className="carousel-control-prev"
+                type="button"
+                data-bs-target="#recepcionCarousel"
+                data-bs-slide="prev"
+                style={{
+                  opacity: 0.8,
+                  transition: "opacity 0.3s ease",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.opacity = "1")}
+                onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.8")}
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                  style={{
+                    filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.5))",
+                  }}
+                ></span>
+                <span className="visually-hidden">Anterior</span>
+              </button>
+              <button
+                className="carousel-control-next"
+                type="button"
+                data-bs-target="#recepcionCarousel"
+                data-bs-slide="next"
+                style={{
+                  opacity: 0.8,
+                  transition: "opacity 0.3s ease",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.opacity = "1")}
+                onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.8")}
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                  style={{
+                    filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.5))",
+                  }}
+                ></span>
+                <span className="visually-hidden">Siguiente</span>
+              </button>
+
+              {/* Indicadores mejorados */}
+              <div className="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#recepcionCarousel"
+                  data-bs-slide-to="0"
+                  className="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                  style={{
+                    width: "12px",
+                    height: "12px",
+                    borderRadius: "50%",
+                    transition: "all 0.3s ease",
+                  }}
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#recepcionCarousel"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                  style={{
+                    width: "12px",
+                    height: "12px",
+                    borderRadius: "50%",
+                    transition: "all 0.3s ease",
+                  }}
+                ></button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
