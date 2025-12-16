@@ -87,6 +87,20 @@ const Servicios = ({ darkMode }) => {
           >
             Servicios Incluidos
           </p>
+
+          {/* Texto adicional debajo */}
+          <p
+            className="mt-2 mx-auto"
+            style={{
+              color: darkMode ? "#aaa" : "#555",
+              fontSize: "1rem",
+              maxWidth: "600px", // limita ancho en pantallas grandes
+              lineHeight: "1.5",
+            }}
+          >
+            Cumpleaños de 15, Bodas, eventos Corporativos, Bar Mitzvah,
+            Publicidad, Eventos, Presentación de Productos y más...
+          </p>
         </div>
 
         <div className="row g-4 mb-4">
