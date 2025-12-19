@@ -1,6 +1,6 @@
 import React from "react";
 import { Users } from "lucide-react";
-import aboutUs from "../assets/images/aboutUs.webp";
+import aboutUs from "../assets/images/fachAbout.webp";
 
 const AboutUs = ({ darkMode }) => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import fachadaImg from "../assets/images/fachada.webp"; // ✅ importa la imagen local
+import fachadaImg from "../assets/images/fachadaHero.webp"; // ✅ importa la imagen local
 
 const Hero = ({ scrollToSection }) => {
   return (
